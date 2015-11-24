@@ -1,0 +1,18 @@
+$(document).ready(function(){
+	$('[data-toggle=tab][href=#armeria]').on('click',function(){
+		setTimeout(function(){
+			drawChart5();
+		},550)
+		$('#map_div5').width('100%');
+		$('#armeria').show(500);
+		$('#tecoman').hide(250);
+		$('#villa').hide(250);
+		$('#colima').hide(250);
+		$('#manzanillo').hide(250);
+		$('#comala').hide(250);
+		$('#coqui').hide(250);
+		$('#cuau').hide(250);
+		$('#ixtlahuacan').hide(250);
+		$('#mina').hide(250);
+	});
+});

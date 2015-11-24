@@ -1,0 +1,55 @@
+
+path {  stroke: #fff; }
+path:hover {  opacity:0.9; }
+.axis {  font: 10px sans-serif; }
+.legend tr{    border-bottom:1px solid grey; }
+.legend tr:first-child{    border-top:1px solid grey; }
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {  display: none; }
+.legend{
+    margin-bottom:76px;
+    display:inline-block;
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+.legend td{
+    padding:4px 5px;
+    vertical-align:bottom;
+}
+.legendFreq, .legendPerc{
+    align:right;
+    width:50px;
+}
+
+
+
+/* ratio based on images (png) dimensions 
+   ratio relative / absolute needed with safari (win7) and dolphin browser android 4.2 
+   with background-size: cover in the SVG (<style>)
+*/
+.my-svg-container{
+  position: relative;
+  width: 50%;
+  height: 0;
+  padding-bottom: 55%;
+  margin: 0 auto;
+  outline: 1px solid gray;
+  overflow: hidden;
+}
+.my-svg{
+  display: block;
+  position: absolute;
+  top:0;
+  left:0;
+  padding: 0;
+  margin: 0;
+  width: 100%; 
+  height: 100%; 
+}
