@@ -657,15 +657,21 @@
 		{
 			$positivos = $this->db->query("SELECT count(*) as positivos FROM twitt WHERE valoracion = 1 and 
 										  (texto LIKE '%nachoperaltacol%' or texto LIKE '%jips%' 
-										  or texto LIKE '%JoveNachos%' or texto LIKE '%JuntosNadieNosPara%')"
+										  or texto LIKE '%JoveNachos%' or texto LIKE '%JuntosNadieNosPara%'
+										  or texto LIKE '%JTConNacho%' or texto LIKE '%JuntosHacemosMás%'
+										  or texto LIKE '%JuntosLoEstamosLogrando%' or texto LIKE '%LoEstamosLogrando%')"
 										);
 			$negativos = $this->db->query("SELECT count(*) as negativos FROM twitt WHERE valoracion = 2 and 
 										  (texto LIKE '%nachoperaltacol%' or texto LIKE '%jips%' 
-										  or texto LIKE '%JoveNachos%' or texto LIKE '%JuntosNadieNosPara%')"
+										  or texto LIKE '%JoveNachos%' or texto LIKE '%JuntosNadieNosPara%'
+										  or texto LIKE '%JTConNacho%' or texto LIKE '%JuntosHacemosMás%'
+										  or texto LIKE '%JuntosLoEstamosLogrando%' or texto LIKE '%LoEstamosLogrando%')"
 										);
 			$neutros = $this->db->query("SELECT count(*) as neutros FROM twitt WHERE valoracion = 3 and 
 										  (texto LIKE '%nachoperaltacol%' or texto LIKE '%jips%' 
-										  or texto LIKE '%JoveNachos%' or texto LIKE '%JuntosNadieNosPara%')"
+										  or texto LIKE '%JoveNachos%' or texto LIKE '%JuntosNadieNosPara%'
+										  or texto LIKE '%JTConNacho%' or texto LIKE '%JuntosHacemosMás%'
+										  or texto LIKE '%JuntosLoEstamosLogrando%' or texto LIKE '%LoEstamosLogrando%')"
 										);
 
 			$row_positivos = $positivos->row();
@@ -688,17 +694,20 @@
 			$positivos = $this->db->query("SELECT count(*) as positivos FROM twitt WHERE valoracion = 1 and 
 										  (texto LIKE '%JL_Preciado_%' or texto LIKE '%DesdeAbajoConTrabajo%' 
 										  or texto LIKE '%ClaroQuePodemos%' or texto LIKE '%AlegrateYaSeVan%'
-										  or texto LIKE '%JorgeLuis %' or texto LIKE '%YaSeVan%')"  
+										  or texto LIKE '%JorgeLuis %' or texto LIKE '%YaSeVan%' 
+										  or texto LIKE '%AlégrateDeQueSeVanSeVan%')"  
 										);
 			$negativos = $this->db->query("SELECT count(*) as negativos FROM twitt WHERE valoracion = 2 and 
 										  (texto LIKE '%JL_Preciado_%' or texto LIKE '%DesdeAbajoConTrabajo%' 
 										  or texto LIKE '%ClaroQuePodemos%' or texto LIKE '%AlegrateYaSeVan%'
-										  or texto LIKE '%JorgeLuis %' or texto LIKE '%YaSeVan%')"  
+										  or texto LIKE '%JorgeLuis %' or texto LIKE '%YaSeVan%' 
+										  or texto LIKE '%AlégrateDeQueSeVanSeVan%')"  
 										);
 			$neutros = $this->db->query("SELECT count(*) as neutros FROM twitt WHERE valoracion = 3 and 
 										  (texto LIKE '%JL_Preciado_%' or texto LIKE '%DesdeAbajoConTrabajo%' 
 										  or texto LIKE '%ClaroQuePodemos%' or texto LIKE '%AlegrateYaSeVan%'
-										  or texto LIKE '%JorgeLuis %' or texto LIKE '%YaSeVan%')"  
+										  or texto LIKE '%JorgeLuis %' or texto LIKE '%YaSeVan%' 
+										  or texto LIKE '%AlégrateDeQueSeVanSeVan%')"  
 										);
 
 			$row_positivos = $positivos->row();
@@ -721,17 +730,17 @@
 			$positivos = $this->db->query("SELECT count(*) as positivos FROM twitt WHERE valoracion = 1 and 
 										  (texto LIKE '%leonciomoranL8%' or texto LIKE '%DefiendeColima%' 
 										  or texto LIKE '%MovimientoCiudadano%' or texto LIKE '%CambiarLaHistoria%'
-										  or texto LIKE '%TodosConL8cho%')"  
+										  or texto LIKE '%TodosConL8cho%' or texto LIKE '%SigueColima%')"  
 										);
 			$negativos = $this->db->query("SELECT count(*) as negativos FROM twitt WHERE valoracion = 2 and 
 										  (texto LIKE '%leonciomoranL8%' or texto LIKE '%DefiendeColima%' 
 										  or texto LIKE '%MovimientoCiudadano%' or texto LIKE '%CambiarLaHistoria%'
-										  or texto LIKE '%TodosConL8cho%')"  
+										  or texto LIKE '%TodosConL8cho%' or texto LIKE '%SigueColima%')"  
 										);
 			$neutros = $this->db->query("SELECT count(*) as neutros FROM twitt WHERE valoracion = 3 and 
 										  (texto LIKE '%leonciomoranL8%' or texto LIKE '%DefiendeColima%' 
 										  or texto LIKE '%MovimientoCiudadano%' or texto LIKE '%CambiarLaHistoria%'
-										  or texto LIKE '%TodosConL8cho%')"
+										  or texto LIKE '%TodosConL8cho%' or texto LIKE '%SigueColima%')"
 										);
 
 			$row_positivos = $positivos->row();
@@ -1899,7 +1908,7 @@
 										LIKE '%PASALAVOZ%' or hashtags LIKE '%SoyHumanista%' or hashtags LIKE '%PartidoHumanista%' 
 										or hashtags LIKE '%UnidadHumanista%' or hashtags LIKE '%Humanista%' or hashtags LIKE 
 										'%TodosConL8cho%' or hashtags LIKE '%CambiarLaHistoria%' or hashtags LIKE '%MovimientoCiudadano%' 
-										or hashtags LIKE '%leonciomoranL8%'or hashtags LIKE '%PRDcolima%' or hashtags LIKE 
+										or hashtags LIKE '%leonciomoranL8%' or hashtags LIKE '%SigueColima%' or hashtags LIKE '%PRDcolima%' or hashtags LIKE 
 										'%PRD%'or texto LIKE '%ComoTú%' or texto LIKE '%ComoTu%' or texto LIKE '%EsHoraDelPRD%' 
 										or hashtags LIKE '%SomosPRD%'or hashtags LIKE '%SabemosGobernar%' 
 										or hashtags LIKE '%NuevaIzquierda%'or hashtags LIKE '%MarthaZepeda_%' or hashtags LIKE '%DebateColima%'

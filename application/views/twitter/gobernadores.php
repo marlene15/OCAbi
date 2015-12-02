@@ -122,7 +122,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 													  </tr>	
 													  <tr>
 													    <td class="active"><center><img src="<?php echo base_url()?>assets/logos_partidos/PRD.jpg" class="img-responsive center-block" width="30" height="30"></center></td>
-													    <td class="success"><center>Martha Zepeda</center></td>
+													    <td class="success"><center>Martha Zepeda <?php echo $seguidoresm ?></center></td>
 													  </tr>	
 													  <tr>
 													    <td class="active"><center><img src="<?php echo base_url()?>assets/logos_partidos/PMC.png" class="img-responsive center-block" width="30" height="30"></center></td>
@@ -154,6 +154,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 											        <a class="btn btn-primary btn-lg" id="consulta_nube4"> Junio</a>
 											        <a class="btn btn-primary btn-lg" id="consulta_nube5"> Octubre</a>
 											        <a class="btn btn-primary btn-lg" id="consulta_nube6"> Noviembre</a>
+											        <a class="btn btn-primary btn-lg" id="consulta_nube7"> Diciembre</a>
 										      	</div>
 										    </div>
 										</div> 										
@@ -367,7 +368,8 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
       	$("#consulta_nube3").removeClass('active btn-success');
       	$("#consulta_nube4").removeClass('active btn-success');  
       	$("#consulta_nube5").removeClass('active btn-success'); 
-      	$("#consulta_nube6").removeClass('active btn-success');     	
+      	$("#consulta_nube6").removeClass('active btn-success');    
+      	$("#consulta_nube7").removeClass('active btn-success');   	
         var parametros = {
                 "mes" : '03'
         };
@@ -389,7 +391,8 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
       	$("#consulta_nube3").removeClass('active btn-success');
       	$("#consulta_nube4").removeClass('active btn-success');
       	$("#consulta_nube5").removeClass('active btn-success'); 
-      	$("#consulta_nube6").removeClass('active btn-success');        	
+      	$("#consulta_nube6").removeClass('active btn-success'); 
+      	$("#consulta_nube7").removeClass('active btn-success');         	
         var parametros = {
                 "mes" : '04'
         };
@@ -412,6 +415,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
       	$("#consulta_nube4").removeClass('active btn-success'); 
       	$("#consulta_nube5").removeClass('active btn-success'); 
       	$("#consulta_nube6").removeClass('active btn-success'); 
+      	$("#consulta_nube7").removeClass('active btn-success');  
         var parametros = {
                 "mes" : '05'
         };
@@ -434,6 +438,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
       	$("#consulta_nube").addClass('btn-primary');
       	$("#consulta_nube5").removeClass('active btn-success'); 
       	$("#consulta_nube6").removeClass('active btn-success'); 
+      	$("#consulta_nube7").removeClass('active btn-success');  
         var parametros = {
                 "mes" : '06'
         };
@@ -456,6 +461,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
       	$("#consulta_nube").addClass('btn-primary');
       	$("#consulta_nube4").removeClass('active btn-success'); 
       	$("#consulta_nube6").removeClass('active btn-success'); 
+      	$("#consulta_nube7").removeClass('active btn-success');  
         var parametros = {
                 "mes" : '10'
         };
@@ -478,8 +484,32 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
       	$("#consulta_nube").addClass('btn-primary');
       	$("#consulta_nube4").removeClass('active btn-success'); 
       	$("#consulta_nube5").removeClass('active btn-success'); 
+      	$("#consulta_nube7").removeClass('active btn-success');  
         var parametros = {
                 "mes" : '11'
+        };
+        $.ajax({                                            
+          type:"post",
+          data:parametros,
+          url: '<?php echo site_url('twitter/controlador_consultas/nube_gobernadores');?>',                                      
+          dataType: 'html',
+          success: function (html) {
+            $('#nube_consulta').html(html);   
+          }
+        });            
+      });
+
+      $("#consulta_nube7").click(function(event) {
+      	$("#consulta_nube7").addClass('active btn-success');
+      	$("#consulta_nube2").removeClass('active btn-success');
+      	$("#consulta_nube3").removeClass('active btn-success');
+      	$("#consulta_nube").removeClass('active btn-success'); 
+      	$("#consulta_nube").addClass('btn-primary');
+      	$("#consulta_nube4").removeClass('active btn-success'); 
+      	$("#consulta_nube5").removeClass('active btn-success'); 
+      	$("#consulta_nube6").removeClass('active btn-success');  
+        var parametros = {
+                "mes" : '12'
         };
         $.ajax({                                            
           type:"post",
