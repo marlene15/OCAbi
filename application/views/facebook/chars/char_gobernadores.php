@@ -14,11 +14,7 @@
           ['PRI',<?php echo $megustaci ?>, <?php echo $seguidoresci ?>],
           ['PRI',<?php echo $megustacj ?>, <?php echo $seguidorescj ?>],
           ['PRD',<?php echo $megustacm ?>, <?php echo $seguidorescm ?>],
-          ['PT',<?php echo $megustacd ?>, <?php echo $seguidorescd ?>],
-          ['MC',<?php echo $megustacl ?>, <?php echo $seguidorescl ?>],
-          ['PM',<?php echo $megustacf ?>, <?php echo $seguidorescf ?>],
-          ['PES',<?php echo $megustacg ?>, <?php echo $seguidorescg ?>],
-          ['PH',<?php echo $megustacc ?>, <?php echo $seguidorescc ?>]        
+          ['MC',<?php echo $megustacl ?>, <?php echo $seguidorescl ?>]       
         ]);
 
         var view = new google.visualization.DataView(data);

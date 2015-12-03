@@ -75,21 +75,9 @@ class Controlador_consultas extends CI_Controller {
 
 	                "megustacm" => $gobernadores['martha']->Megusta,
 	                "seguidorescm" => $gobernadores['martha']->PersonasHablan,
-
-	                "megustacd" => $gobernadores['david']->Megusta,
-	                "seguidorescd" => $gobernadores['david']->PersonasHablan,
 	                
 	                "megustacl" => $gobernadores['locho']->Megusta,
-	                "seguidorescl" => $gobernadores['locho']->PersonasHablan,
-	                
-	                "megustacf" => $gobernadores['francisco']->Megusta,
-	                "seguidorescf" => $gobernadores['francisco']->PersonasHablan,
-
-	                "megustacg" => $gobernadores['gerardo']->Megusta,
-	                "seguidorescg" => $gobernadores['gerardo']->PersonasHablan,
-
-	                "megustacc" => $gobernadores['carlos']->Megusta,
-	                "seguidorescc" => $gobernadores['carlos']->PersonasHablan,	
+	                "seguidorescl" => $gobernadores['locho']->PersonasHablan,	
 	                
 	                'ultima_fecha' => $fecha,
 	                'existe' => $existe,

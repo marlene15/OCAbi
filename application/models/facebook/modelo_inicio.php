@@ -18,6 +18,7 @@ class Modelo_inicio extends CI_Model
 		if($consulta->num_rows()>0)
 		{
 			return $consulta->row(); //Con el row solo se obtiene una fila de resulTA
+		}
 	} 
  
 	//********CANDIDATOS A PRESIDENTE MUNICIPAL DE COLIMA*********
@@ -1789,34 +1790,19 @@ class Modelo_inicio extends CI_Model
 								  where fecha = '$fecha' and Nombre = 'Leoncio Morán Sánchez'");
 		$martha = $this->db->query("SELECT Megusta, PersonasHablan from candidatos 
 								  where fecha = '$fecha' and Nombre = 'Martha Zepeda del Toro'");
-		$david = $this->db->query("SELECT Megusta, PersonasHablan from candidatos 
-								  where fecha = '$fecha' and Nombre = 'David Munro González'");
-		$francisco = $this->db->query("SELECT Megusta, PersonasHablan from candidatos 
-								  where fecha = '$fecha' and Nombre = 'José Francisco Gallardo Rodríguez'");
-		$gerardo = $this->db->query("SELECT Megusta, PersonasHablan from candidatos 
-								  where fecha = '$fecha' and Nombre = 'Gerardo Galván Pinto'");
-		$carlos = $this->db->query("SELECT Megusta, PersonasHablan from candidatos 
-								  where fecha = '$fecha' and Nombre = 'Carlos Barbazán Martínez'");
 
-		if($nacho->num_rows()>0 and $jorge->num_rows()>0 and $locho->num_rows()>0 and $martha->num_rows()>0 and $david->num_rows()>0 and $francisco->num_rows()>0 and $gerardo->num_rows()>0 and $carlos->num_rows()>0)
+		if($nacho->num_rows()>0 and $jorge->num_rows()>0 and $locho->num_rows()>0 and $martha->num_rows()>0)
 		{
 			$nacho = $nacho->row();
 			$jorge = $jorge->row();
 			$locho = $locho->row();
 			$martha = $martha->row();
-			$david = $david->row();
-			$francisco = $francisco->row();
-			$gerardo = $gerardo->row();
-			$carlos = $carlos->row();
+
 			$a = array(
                 "nacho" => $nacho,
                 "jorge" => $jorge,
                 "locho" => $locho,
-                "martha" => $martha,
-                "david" => $david,
-				"francisco" => $francisco,
-				"gerardo" => $gerardo,
-				"carlos" => $carlos
+                "martha" => $martha
             );
             return $a;
 		}

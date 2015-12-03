@@ -58,9 +58,9 @@ class Controlador_inicio extends CI_Controller {
 		$fecha = $this->fechas->fecha_dd_mes_aaaa_edita($ultima_fecha);
 		
 		$mes='03';
-		// echo "a =".$ultima_fecha;
-		// print_r($gobernadores);
-		// echo "a2 =".$ultima_fecha2;
+		 //echo "a =".$ultima_fecha;
+		 //print_r($gobernadores);
+		 //echo "a2 =".$ultima_fecha2;
 		$data = array(
 			                "megustaci" => $gobernadores['nacho']->Megusta,
 			                "seguidoresci" => $gobernadores['nacho']->PersonasHablan,
@@ -71,20 +71,8 @@ class Controlador_inicio extends CI_Controller {
 			                "megustacm" => $gobernadores['martha']->Megusta,
 			                "seguidorescm" => $gobernadores['martha']->PersonasHablan,
 
-			                "megustacd" => $gobernadores['david']->Megusta,
-			                "seguidorescd" => $gobernadores['david']->PersonasHablan,
-			                
 			                "megustacl" => $gobernadores['locho']->Megusta,
-			                "seguidorescl" => $gobernadores['locho']->PersonasHablan,
-			                
-			                "megustacf" => $gobernadores['francisco']->Megusta,
-			                "seguidorescf" => $gobernadores['francisco']->PersonasHablan,
-
-			                "megustacg" => $gobernadores['gerardo']->Megusta,
-			                "seguidorescg" => $gobernadores['gerardo']->PersonasHablan,
-
-			                "megustacc" => $gobernadores['carlos']->Megusta,
-			                "seguidorescc" => $gobernadores['carlos']->PersonasHablan,			                
+			                "seguidorescl" => $gobernadores['locho']->PersonasHablan,			                
 
 			                'ultima_fecha' => $fecha
 			            );
@@ -569,11 +557,7 @@ class Controlador_inicio extends CI_Controller {
 		$jorge = $this->modelo_inicio->valoracion_jorge();
 		$martha = $this->modelo_inicio->valoracion_martha();
 		$locho = $this->modelo_inicio->valoracion_locho();
-		$david = $this->modelo_inicio->valoracion_david();
-		$jose = $this->modelo_inicio->valoracion_jose();
-		$gerardo = $this->modelo_inicio->valoracion_gerardo();
-		$carlos = $this->modelo_inicio->valoracion_carlos();						
-
+		
 		$datos = array(
 					  'nachoP' => $nacho['positivos'],
 					  'nachoNe' => $nacho['negativos'],
@@ -587,18 +571,7 @@ class Controlador_inicio extends CI_Controller {
 					  'lochoP' => $locho['positivos'],
 					  'lochoNe' => $locho['negativos'],
 					  'lochoN' => $locho['neutros'],
-					  'davidP' => $david['positivos'],
-					  'davidNe' => $david['negativos'],
-					  'davidN' => $david['neutros'],
-					  'joseP' => $jose['positivos'],
-					  'joseNe' => $jose['negativos'],
-					  'joseN' => $jose['neutros'],
-					  'gerardoP' => $gerardo['positivos'],
-					  'gerardoNe' => $gerardo['negativos'],
-					  'gerardoN' => $gerardo['neutros'],
-					  'carlosP' => $carlos['positivos'],
-					  'carlosNe' => $carlos['negativos'],
-					  'carlosN' => $carlos['neutros']
+					  
 					  );
 		$this->load->view('facebook/valoracionGobernadores',$datos);
 	}	

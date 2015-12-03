@@ -118,23 +118,7 @@
                                       <tr>
                                         <td class="active"><center><img src="<?php echo base_url()?>assets/logos_partidos/PMC.png" class="img-responsive center-block" width="30" height="30"></center></td>
                                         <td class="success"><center>Locho Morán</center></td>
-                                      </tr>                         
-                                      <tr>
-                                        <td class="active"><center><img src="<?php echo base_url()?>assets/logos_partidos/PT.png" class="img-responsive center-block" width="25" height="25"></center></td>
-                                        <td class="success"><center>David Munro González</center></td>
-                                      </tr>
-                                      <tr>
-                                        <td class="active"><center><img src="<?php echo base_url()?>assets/logos_partidos/MORENA.jpg" class="img-responsive center-block" width="30" height="30"></center></td>
-                                        <td class="success"><center>José Francisco Gallardo Rodríguez</center></td>
-                                      </tr> 
-                                      <tr>
-                                        <td class="active"><center><img src="<?php echo base_url()?>assets/logos_partidos/PES.jpg" class="img-responsive center-block" width="30" height="30"></center></td>
-                                        <td class="success"><center>Gerardo Galván Pinto</center></td>
-                                      </tr> 
-                                      <tr>
-                                        <td class="active"><center><img src="<?php echo base_url()?>assets/logos_partidos/HUMANISTA.png" class="img-responsive center-block" width="30" height="30"></center></td>
-                                        <td class="success"><center>Carlos Barbazán Martínez</center></td>
-                                      </tr>                                                                            
+                                      </tr>                                                                                                    
                                     </tbody>
                                   </table>                                      
                                 </div>
@@ -204,11 +188,7 @@
         ['Coalición \n PRI-PVE-PNA',<?php echo $megustaci ?>, <?php echo $seguidoresci ?>],
         ['PAN',<?php echo $megustacj ?>, <?php echo $seguidorescj ?>],
         ['PRD',<?php echo $megustacm ?>, <?php echo $seguidorescm ?>],
-        ['PT',<?php echo $megustacd ?>, <?php echo $seguidorescd ?>],
-        ['MC',<?php echo $megustacl ?>, <?php echo $seguidorescl ?>],
-        ['PM',<?php echo $megustacf ?>, <?php echo $seguidorescf ?>],
-        ['PES',<?php echo $megustacg ?>, <?php echo $seguidorescg ?>],
-        ['PH',<?php echo $megustacc ?>, <?php echo $seguidorescc ?>]        
+        ['MC',<?php echo $megustacl ?>, <?php echo $seguidorescl ?>]     
       ]);
 
       var view = new google.visualization.DataView(data);

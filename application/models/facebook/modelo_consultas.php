@@ -42,35 +42,20 @@
 									  where fecha = '$fecha' and Nombre = 'Leoncio Morán Sánchez'");
 			$martha = $this->db->query("SELECT Megusta, PersonasHablan from candidatos 
 									  where fecha = '$fecha' and Nombre = 'Martha Zepeda del Toro'");
-			$david = $this->db->query("SELECT Megusta, PersonasHablan from candidatos 
-									  where fecha = '$fecha' and Nombre = 'David Munro González'");
-			$francisco = $this->db->query("SELECT Megusta, PersonasHablan from candidatos 
-									  where fecha = '$fecha' and Nombre = 'José Francisco Gallardo Rodríguez'");
-			$gerardo = $this->db->query("SELECT Megusta, PersonasHablan from candidatos 
-									  where fecha = '$fecha' and Nombre = 'Gerardo Galván Pinto'");
-			$carlos = $this->db->query("SELECT Megusta, PersonasHablan from candidatos 
-									  where fecha = '$fecha' and Nombre = 'Carlos Barbazán Martínez'");
 
 			
-				$nacho = $nacho->row();
-				$jorge = $jorge->row();
-				$locho = $locho->row();
-				$martha = $martha->row();
-				$david = $david->row();
-				$francisco = $francisco->row();
-				$gerardo = $gerardo->row();
-				$carlos = $carlos->row();
-				$a = array(
-	                "nacho" => $nacho,
-	                "jorge" => $jorge,
-	                "locho" => $locho,
-	                "martha" => $martha,
-	                "david" => $david,
-					"francisco" => $francisco,
-					"gerardo" => $gerardo,
-					"carlos" => $carlos
-	            );
-	            return $a;
+			$nacho = $nacho->row();
+			$jorge = $jorge->row();
+			$locho = $locho->row();
+			$martha = $martha->row();
+
+			$a = array(
+                "nacho" => $nacho,
+                "jorge" => $jorge,
+                "locho" => $locho,
+                "martha" => $martha
+            );
+            return $a;
 			
 		}
 
