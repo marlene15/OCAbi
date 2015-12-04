@@ -59,7 +59,7 @@
   };      
   if (<?php echo $existe ?> ==2) {
     $('#alert').show();
-    $('#alert').html('<div id="alert" class="alert fade in"><button type="button" class="close" data-dismiss="alert"></button><strong><center>Fecha No Encontrada!</strong> La información se encuentra disponible a partir de la fecha: 3 Marzo 2015 hasta el <?php echo $ultima_fecha ?><br/>Se colocó la última fecha encontrada</center></div>');
+    $('#alert').html('<div id="alert" class="alert alert-error"><button type="button" class="close" data-dismiss="alert"></button><strong><center>Fecha No Encontrada!</strong> La información se encuentra disponible a partir de la fecha: 4 Mayo 2015 al 3 de Junio 2015, del 8 de Junio 2015 al 3 de Julio 2015 y del 17 de Noviembre 2015 al <?php echo $ultima_fecha ?><br/>Se colocó la última fecha encontrada</center></div>');
   }
   else
   {
