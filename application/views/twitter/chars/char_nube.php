@@ -29,7 +29,7 @@
       		{
       			$a2[] = array(
 	                "text" => $key,
-	                "size" => $value*8
+	                "size" => $value*20
            	);
       		}		    
 		};

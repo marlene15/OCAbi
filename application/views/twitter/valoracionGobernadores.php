@@ -321,8 +321,9 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
                                                         <i class="icon-bar-chart"></i>
                                                         <h3>Menciones al día</h3>                                                    
                                                     </div>
-                                                    <div class="widget-content">   
-                                                        <div id="chart_div4"></div>
+                                                    <div class="widget-content">  
+                                                        No hay menciones de Martha Zepeda 
+                                                        <!--<div id="chart_div4"></div>-->
                                                     </div>
                                                 </div> 
                                             </div>

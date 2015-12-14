@@ -97,6 +97,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
                                                     </div>
                                                     <div class="widget-content">                                          
                                                         <center>
+                                                            <div>No hay tuits en Armería</div>
                                                             <div id="map_div5" style="width: 100%; height: 500px;"></div> <!--Primer mapa-->  
                                                         </center> 
                                                     </div>
@@ -239,6 +240,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
                                                     </div>
                                                     <div class="widget-content">                                          
                                                         <center>
+                                                            <div>No hay tuits en Minatitlán</div>
                                                             <div id="map_div10" style="width: 100%; height: 500px;"></div> <!--Primer mapa-->  
                                                         </center> 
                                                     </div>
@@ -310,33 +312,6 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
                 "Lat" => $gobernadores_armeria->latitud,
                 "Long" => $gobernadores_armeria->longitud
             );
-        }  
-
-        $a18 = array();
-        foreach ($dipFederales_armeria as $dipFederales_armeria) 
-        {
-            $a18[] = array(
-                "Lat" => $dipFederales_armeria->latitud,
-                "Long" => $dipFederales_armeria->longitud
-            );
-        }
-
-        $a19 = array();
-        foreach ($dipLocales_armeria as $dipLocales_armeria) 
-        {
-            $a19[] = array(
-                "Lat" => $dipLocales_armeria->latitud,
-                "Long" => $dipLocales_armeria->longitud
-            );
-        }
-
-        $a20 = array();
-        foreach ($presidentes_armeria as $presidentes_armeria) 
-        {
-            $a20[] = array(
-                "Lat" => $presidentes_armeria->latitud,
-                "Long" => $presidentes_armeria->longitud
-            );
         }                          
     ?>    
   function drawChart5() 
@@ -349,18 +324,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
           ?>
           [<?php echo $a17[$i]['Lat'] ?>, <?php echo $a17[$i]['Long'] ?>],
           <?php } ?>
-          <?php for ($i=0; $i<count($a18); $i++) {
-          ?>
-          [<?php echo $a18[$i]['Lat'] ?>, <?php echo $a18[$i]['Long'] ?>],
-          <?php } ?>
-          <?php for ($i=0; $i<count($a19); $i++) {
-          ?>
-          [<?php echo $a19[$i]['Lat'] ?>, <?php echo $a19[$i]['Long'] ?>],
-          <?php } ?>
-          <?php for ($i=0; $i<count($a20); $i++) {
-          ?>
-          [<?php echo $a20[$i]['Lat'] ?>, <?php echo $a20[$i]['Long'] ?>],
-          <?php } ?>
+          
         ]
     );
 

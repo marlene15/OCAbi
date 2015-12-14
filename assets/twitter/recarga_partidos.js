@@ -45,5 +45,6 @@ $(document).ready(function(){
           drawChart7();
         },500)
         $('#chart_div12').width('100%'); 
+        $('#chart_div13').width('100%');  
       });
 });

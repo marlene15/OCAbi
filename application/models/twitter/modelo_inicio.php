@@ -655,19 +655,19 @@
 		//Obtener valoracion de comentarios de nacho
 		public function valoracion_nacho()
 		{
-			$positivos = $this->db->query("SELECT count(*) as positivos FROM twitt WHERE valoracion = 1 and 
+			$positivos = $this->db->query("SELECT count(*) as positivos FROM twitt WHERE valoracion = 1 and fecha >= '2015-12-01' and
 										  (texto LIKE '%nachoperaltacol%' or texto LIKE '%jips%' 
 										  or texto LIKE '%JoveNachos%' or texto LIKE '%JuntosNadieNosPara%'
 										  or texto LIKE '%JTConNacho%' or texto LIKE '%JuntosHacemosMás%'
 										  or texto LIKE '%JuntosLoEstamosLogrando%' or texto LIKE '%LoEstamosLogrando%')"
 										);
-			$negativos = $this->db->query("SELECT count(*) as negativos FROM twitt WHERE valoracion = 2 and 
+			$negativos = $this->db->query("SELECT count(*) as negativos FROM twitt WHERE valoracion = 2 and fecha >= '2015-12-01' and
 										  (texto LIKE '%nachoperaltacol%' or texto LIKE '%jips%' 
 										  or texto LIKE '%JoveNachos%' or texto LIKE '%JuntosNadieNosPara%'
 										  or texto LIKE '%JTConNacho%' or texto LIKE '%JuntosHacemosMás%'
 										  or texto LIKE '%JuntosLoEstamosLogrando%' or texto LIKE '%LoEstamosLogrando%')"
 										);
-			$neutros = $this->db->query("SELECT count(*) as neutros FROM twitt WHERE valoracion = 3 and 
+			$neutros = $this->db->query("SELECT count(*) as neutros FROM twitt WHERE valoracion = 3 and fecha >= '2015-12-01' and
 										  (texto LIKE '%nachoperaltacol%' or texto LIKE '%jips%' 
 										  or texto LIKE '%JoveNachos%' or texto LIKE '%JuntosNadieNosPara%'
 										  or texto LIKE '%JTConNacho%' or texto LIKE '%JuntosHacemosMás%'
@@ -691,19 +691,19 @@
 		//Obtener valoracion de comentarios de Jorge Luis
 		public function valoracion_jorge()
 		{
-			$positivos = $this->db->query("SELECT count(*) as positivos FROM twitt WHERE valoracion = 1 and 
+			$positivos = $this->db->query("SELECT count(*) as positivos FROM twitt WHERE valoracion = 1 and fecha >= '2015-12-01' and
 										  (texto LIKE '%JL_Preciado_%' or texto LIKE '%DesdeAbajoConTrabajo%' 
 										  or texto LIKE '%ClaroQuePodemos%' or texto LIKE '%AlegrateYaSeVan%'
 										  or texto LIKE '%JorgeLuis %' or texto LIKE '%YaSeVan%' 
 										  or texto LIKE '%AlégrateDeQueSeVanSeVan%')"  
 										);
-			$negativos = $this->db->query("SELECT count(*) as negativos FROM twitt WHERE valoracion = 2 and 
+			$negativos = $this->db->query("SELECT count(*) as negativos FROM twitt WHERE valoracion = 2 and fecha >= '2015-12-01' and
 										  (texto LIKE '%JL_Preciado_%' or texto LIKE '%DesdeAbajoConTrabajo%' 
 										  or texto LIKE '%ClaroQuePodemos%' or texto LIKE '%AlegrateYaSeVan%'
 										  or texto LIKE '%JorgeLuis %' or texto LIKE '%YaSeVan%' 
 										  or texto LIKE '%AlégrateDeQueSeVanSeVan%')"  
 										);
-			$neutros = $this->db->query("SELECT count(*) as neutros FROM twitt WHERE valoracion = 3 and 
+			$neutros = $this->db->query("SELECT count(*) as neutros FROM twitt WHERE valoracion = 3 and fecha >= '2015-12-01' and
 										  (texto LIKE '%JL_Preciado_%' or texto LIKE '%DesdeAbajoConTrabajo%' 
 										  or texto LIKE '%ClaroQuePodemos%' or texto LIKE '%AlegrateYaSeVan%'
 										  or texto LIKE '%JorgeLuis %' or texto LIKE '%YaSeVan%' 
@@ -727,17 +727,17 @@
 		//Obtener valoracion de comentarios de Locho
 		public function valoracion_locho()
 		{
-			$positivos = $this->db->query("SELECT count(*) as positivos FROM twitt WHERE valoracion = 1 and 
+			$positivos = $this->db->query("SELECT count(*) as positivos FROM twitt WHERE valoracion = 1 and fecha >= '2015-12-01' and
 										  (texto LIKE '%leonciomoranL8%' or texto LIKE '%DefiendeColima%' 
 										  or texto LIKE '%MovimientoCiudadano%' or texto LIKE '%CambiarLaHistoria%'
 										  or texto LIKE '%TodosConL8cho%' or texto LIKE '%SigueColima%')"  
 										);
-			$negativos = $this->db->query("SELECT count(*) as negativos FROM twitt WHERE valoracion = 2 and 
+			$negativos = $this->db->query("SELECT count(*) as negativos FROM twitt WHERE valoracion = 2 and fecha >= '2015-12-01' and
 										  (texto LIKE '%leonciomoranL8%' or texto LIKE '%DefiendeColima%' 
 										  or texto LIKE '%MovimientoCiudadano%' or texto LIKE '%CambiarLaHistoria%'
 										  or texto LIKE '%TodosConL8cho%' or texto LIKE '%SigueColima%')"  
 										);
-			$neutros = $this->db->query("SELECT count(*) as neutros FROM twitt WHERE valoracion = 3 and 
+			$neutros = $this->db->query("SELECT count(*) as neutros FROM twitt WHERE valoracion = 3 and fecha >= '2015-12-01' and
 										  (texto LIKE '%leonciomoranL8%' or texto LIKE '%DefiendeColima%' 
 										  or texto LIKE '%MovimientoCiudadano%' or texto LIKE '%CambiarLaHistoria%'
 										  or texto LIKE '%TodosConL8cho%' or texto LIKE '%SigueColima%')"
@@ -760,21 +760,21 @@
 		//Obtener valoracion de comentarios de Martha
 		public function valoracion_martha()
 		{
-			$positivos = $this->db->query("SELECT count(*) as positivos FROM twitt WHERE valoracion = 1 and 
+			$positivos = $this->db->query("SELECT count(*) as positivos FROM twitt WHERE valoracion = 1 and fecha >= '2015-12-01' and
 										  (texto LIKE '%MarthaZepeda_%' or texto LIKE '%PRDcolima%' 
 										  or texto LIKE '%PRD%' or texto LIKE '%ComoTú%'
 										  or texto LIKE '%ComoTu%' or texto LIKE '%EsHoraDelPRD%'
 										  or texto LIKE '%SomosPRD%' or texto LIKE '%SabemosGobernar%'
 										  or texto LIKE '%NuevaIzquierda%')"  
 										);
-			$negativos = $this->db->query("SELECT count(*) as negativos FROM twitt WHERE valoracion = 2 and 
+			$negativos = $this->db->query("SELECT count(*) as negativos FROM twitt WHERE valoracion = 2 and fecha >= '2015-12-01' and
 										  (texto LIKE '%MarthaZepeda_%' or texto LIKE '%PRDcolima%' 
 										  or texto LIKE '%PRD%' or texto LIKE '%ComoTú%'
 										  or texto LIKE '%ComoTu%' or texto LIKE '%EsHoraDelPRD%'
 										  or texto LIKE '%SomosPRD%' or texto LIKE '%SabemosGobernar%'
 										  or texto LIKE '%NuevaIzquierda%')"  
 										);
-			$neutros = $this->db->query("SELECT count(*) as neutros FROM twitt WHERE valoracion = 3 and 
+			$neutros = $this->db->query("SELECT count(*) as neutros FROM twitt WHERE valoracion = 3 and fecha >= '2015-12-01' and
 										  (texto LIKE '%MarthaZepeda_%' or texto LIKE '%PRDcolima%' 
 										  or texto LIKE '%PRD%' or texto LIKE '%ComoTú%'
 										  or texto LIKE '%ComoTu%' or texto LIKE '%EsHoraDelPRD%'
@@ -1727,167 +1727,65 @@
 		{
 			$resultado_gobernadores=$this->db->query("SELECT DISTINCT latitud,longitud,municipio from coordenadas 
 										inner join twitt on twitt.id=coordenadas.id_twitt
-										where twitt.municipio='$municipio' and 
-										  (texto LIKE '%nachoperaltacol%' or texto 
-										  LIKE '%jips%' or texto LIKE '%JuntosNadieNosPara%' or texto LIKE '%JIPS2015%' 
-										  or texto LIKE '%MiSelfiecoNacho%'or texto LIKE '%DesdeAbajoConTrabajo%' 
-										  or texto LIKE '%ConNachoSeguro%' or texto LIKE '%NachoGobernador%' or texto LIKE '%VotaPri%'
-										  or texto LIKE '%NachoVotoSeguro%' or texto LIKE '%NachoColimaEstaContigo%' or texto LIKE '%NachoGano%'
-										  or texto LIKE '%FormulaGanadora%'
-										  or texto LIKE '%ClaroQuePodemos %' or texto LIKE '%NachoPropone%' or texto LIKE '%JorgeLuis%' or texto 
-										  LIKE '%AlegrateYaSeVan%' or texto LIKE '%YaSeVan%' or texto LIKE '%JL_Preciado_%' 
-										  or texto LIKE '%HagámosloNosotros%' or texto LIKE '%TúTienesElPodio%' or texto 
-										  LIKE '%EncuentroSocial%' or texto LIKE '%PartidoEncuentroSocial%' or texto 
-										  LIKE '%PASALAVOZ%' or texto LIKE '%SoyHumanista%' or texto LIKE '%PartidoHumanista%' 
-										  or texto LIKE '%UnidadHumanista%' or texto LIKE '%Humanista%' or texto LIKE 
-										  '%TodosConL8cho%' or texto LIKE '%CambiarLaHistoria%' or texto LIKE '%MovimientoCiudadano%' 
-										  or texto LIKE '%DefiendeColima%' or texto LIKE '%leonciomoranL8%'or texto LIKE '%PRDcolima%' or texto LIKE 
-										  '%PRD%'or texto LIKE '%ComoTú%' or texto LIKE '%ComoTu%' or texto LIKE '%EsHoraDelPRD%' 
-										  or texto LIKE '%SomosPRD%'or texto LIKE '%SabemosGobernar%' 
-										  or texto LIKE '%NuevaIzquierda%'or texto LIKE '%MarthaZepeda_%' or texto LIKE '%DebateColima%')");
-			
-			$resultado_dipFederales=$this->db->query("SELECT DISTINCT latitud,longitud,municipio from coordenadas 
-										inner join twitt on twitt.id=coordenadas.id_twitt
-										where twitt.municipio='$municipio' and 
-										(texto LIKE '%soygp%' or texto 
-										LIKE '%kikerojas007%' or texto LIKE '%indira_vizcaino%' or texto LIKE '%NormaGdeV%' 
-										or texto LIKE '%olave_nery%'or texto LIKE '%TrabajandoPorLoQueMásQuieres%' 										
-										or texto LIKE '%KikeSí%' or texto LIKE '%KikeEsMejor%' or texto 
-										LIKE '%PRI_Colima%' or texto LIKE '%ConIndiraYoSi%' or texto LIKE '%ComoTú%' 
-										or texto LIKE '%Elecciones2015%' or texto LIKE '%NormaGalindo%' or texto LIKE '%NormaDiputadaFederal%'
-										or texto LIKE '%TrabajemosyDecidamosJuntos%')");
-
-			$resultado_dipLocales=$this->db->query("SELECT DISTINCT latitud,longitud,municipio from coordenadas 
-										inner join twitt on twitt.id=coordenadas.id_twitt
-										where twitt.municipio='$municipio' and 
-										(texto LIKE '%HildaCeballos01%' 
-										or texto LIKE '%Distrito1%' 
-										or texto LIKE '%BrigadaEmetista%' 
-										or texto LIKE '%DistritoLocal1%'										
-										or texto LIKE '%yadiraturquesa%' 
-										or texto LIKE '%NuevaAlianza%'
-										or texto LIKE '%turquesa%' 										
-										or texto LIKE '%VotaTurquesa%' 
-										or texto LIKE '%juventudturquesa%' 
-										or texto LIKE '%EligeTurquesa%' 
-										or texto LIKE '%VotaNuevaAlianza%' 
-										or texto LIKE '%Rangel_G_%' 
-										or texto LIKE '%TUPALABRACUENTA%' 
-										or texto LIKE '%TuPalabraCuenta %' 
-										or texto LIKE '%YoConMemo%'
-										or texto LIKE '%Vivi_Ram_A%'
-										or texto LIKE '%Trabajarporlafamilia%'
-										or texto LIKE '%crispindiputado%'
-										or texto LIKE '%TrabajoporTi%'
-										or texto LIKE '%TrabajoParaTi%'
-										or texto LIKE '%IsisColimaVerde%'
-										or texto LIKE '%VamosVerdes%'
-										or texto LIKE '%AlmaDelia_D3%'
-										or texto LIKE '%AlmaDeliaVotoSeguro%'
-										or texto LIKE '%ConAlmaYCorazónPorTi%'
-										or texto LIKE '%VotaAlmaDelia%'
-										or texto LIKE '%YoSoyAD3%'
-										or texto LIKE '%JanethPazPonce%'
-										or texto LIKE '%TrabajamosParaTi%'
-										or texto LIKE '%DistritoIV%'
-										or texto LIKE '%JanethDiputada%'
-										or texto LIKE '%ComalaVotaPAN%'
-										or texto LIKE '%YaGanamos%'
-										or texto LIKE '%EnriquePresidente%'
-										or texto LIKE '%JuanitaAndres%'
-										or texto LIKE '%ResultadosParaTi%'
-										or texto LIKE '%LupeBenavidesF%'
-										or texto LIKE '%octaviotintos%'
-										or texto LIKE '%HonestamenteTeVoyAServir%'
-										or texto LIKE '%YoPropongo%'
-										or texto LIKE '%saracernas%'
-										or texto LIKE '%TuVozEsMiVoz%'
-										or texto LIKE '%DiputadaDistrito7%'
-										or texto LIKE '%PorLasCausasDeLaGente%'
-										or texto LIKE '%JoelPadilla2012%'
-										or texto LIKE '%MeylyPastora%'
-										or texto LIKE '%Atrévete%'
-										or texto LIKE '%MeylyDiputadaLocal%'
-										or texto LIKE '%VIII%'
-										or texto LIKE '%hectormlara%'
-										or texto LIKE '%DistritoVIII%'
-										or texto LIKE '%eusebiomesina%'
-										or texto LIKE '%MesinaTena%'
-										or texto LIKE '%PintoRgz%'
-										or texto LIKE '%BeneficiosParaTodos%'
-										or texto LIKE '%Armida_NG%'
-										or texto LIKE '%ArmidaDiputada%'
-										or texto LIKE '%VotaPRI%'
-										or texto LIKE '%martha_sosa1%'
-										or texto LIKE '%Sergio_SanchezO%'
-										or texto LIKE '%ComoDebeDeSer%'
-										or texto LIKE '%Martha_Meza_%'
-										or texto LIKE '%VerdeSíCumple%'
-										or texto LIKE '%FDiputada%'
-										or texto LIKE '%SantiagoCh2Tec%'
-										or texto LIKE '%ConSantiatoSí%')");
-
-			$resultado_Presidentes=$this->db->query("SELECT DISTINCT latitud,longitud,municipio from coordenadas 
-										inner join twitt on twitt.id=coordenadas.id_twitt
-										where twitt.municipio='$municipio' and 
-										(texto LIKE '%DipEsperanzaA%' 
-										or texto LIKE '%OVPresidente%' 
-										or texto LIKE '%renovaciondinamica%'
-										or texto LIKE '%vamoscontodo%'
-										or texto LIKE '%RenovarladinamicadelaCiudad%' 										
-										or texto LIKE '%yoconoscarsi%' 
-										or texto LIKE '%hectorinsua%' 
-										or texto LIKE '%ElCambioQueQuiereLaGente%' 
-										or texto LIKE '%VotaHectorInsua%' 
-										or texto LIKE '%VotaPan%' 
-										or texto LIKE '%VotaUtil%' 
-										or texto LIKE '%meabaroa%'
-										or texto LIKE '%ImpactoUrbano%'
-										or texto LIKE '%ImpactoEconómico%'
-										or texto LIKE '%CeroCorrucpión%'
-										or texto LIKE '%ImpactoRural%'
-										or texto LIKE '%ImpactoSocial%'
-										or texto LIKE '%GobiernoCiudadano%'
-										or texto LIKE '%MovimientoCiudadano%'
-										or texto LIKE '%CuentasClaras%'
-										or texto LIKE '%EsmePresidenta%'
-										or texto LIKE '%EsNuestroMomento%'
-										or texto LIKE '%YoMeMuevo%'
-										or texto LIKE '%EsmeraldaSíCumple%'
-										or texto LIKE '%EsmeraldaEsGarantía%'
-										or texto LIKE '%EsmeraldaPresidenta%'
-										or texto LIKE '%salo_salazar1%'
-										or texto LIKE '%ResultadosParaComala%'
-										or texto LIKE '%ResultadosParaTi%'
-										or texto LIKE '%MarioCarrillo01%'
-										or texto LIKE '%HagámosloNosotros%'
-										or texto LIKE '%BlancaPRI2015%'
-										or texto LIKE '%TeMerecesUnMejorCuauhtémoc%'
-										or texto LIKE '%SeMerecenUnMejorCuauhtémoc%'
-										or texto LIKE '%UrsuaBlanca%'
-										or texto LIKE '%VotoConsciente%'
-										or texto LIKE '%SiCambioYoCambiaMéxico%'
-										or texto LIKE '%pasalavoz%'
-										or texto LIKE '%hiram1447%'
-										or texto LIKE '%PicoZepeda%'
-										or texto LIKE '%PicoPresidente%'
-										or texto LIKE '%TeQuieroManzanilloMejor%'
-										or texto LIKE '%BarajasYescas%'
-										or texto LIKE '%GenteNuevaTrabajaMejor%'
-										or texto LIKE '%romo_ochoa%'
-										or texto LIKE '%DipManuelPR%'
-										or texto LIKE '%DipArturoGarcia%'
-										or texto LIKE '%OswyDelgado%'
-										or texto LIKE '%CercaDeTiGanaremos%'
-										or texto LIKE '%CercaDeTi%'
-										or texto LIKE '%Yulenny_Cortes%'
-										or texto LIKE '%ConYulennyTúGanas%'
-										or texto LIKE '%JaimeSoteloG%')");
+										where twitt.municipio='$municipio' and fecha >= '2015-12-01' and
+										  (texto LIKE '%nachoperaltacol%' 
+										  or texto LIKE '%jips%' 
+										  or texto LIKE '%JuntosNadieNosPara%' 
+										  or texto LIKE '%JIPS2015%' 
+										  or texto LIKE '%MiSelfiecoNacho%'	
+										  or texto LIKE '%ConNachoSeguro%' 
+										  or texto LIKE '%NachoGobernador%' 
+										  or texto LIKE '%VotaPri%'
+										  or texto LIKE '%NachoVotoSeguro%' 
+										  or texto LIKE '%NachoColimaEstaContigo%' 
+										  or texto LIKE '%NachoGano%' 
+										  or texto LIKE '%FormulaGanadora%' 
+										  or texto LIKE '%JoveNachos%' 
+										  or texto LIKE '%JTConNacho%' 
+										  or texto LIKE '%JuntosHacemosMás%' 
+										  or texto LIKE '%JuntosLoEstamosLogrando%' 
+										  or texto LIKE '%LoEstamosLogrando%' 
+										  or texto LIKE '%nacho peralta%' 
+										  or texto LIKE '%nacho%' 
+										  or texto LIKE '%pri%'	
+										  or texto LIKE '%NachoPropone%' 
+										  or texto LIKE '%JorgeLuis%' 
+										  or texto LIKE '%AlegrateYaSeVan%' 
+										  or texto LIKE '%DesdeAbajoConTrabajo%' 
+										  or texto LIKE '%ClaroQuePodemos%' 
+										  or texto LIKE '%YaSeVan%' 
+										  or texto LIKE '%JL_Preciado_%' 
+										  or texto LIKE '%AlégrateDeQueSeVanSeVan%' 
+										  or texto LIKE '%HagámosloNosotros%' 
+										  or texto LIKE '%TúTienesElPodio%' 
+										  or texto LIKE '%EncuentroSocial%' 
+										  or texto LIKE '%PartidoEncuentroSocial%' 
+										  or texto LIKE '%PASALAVOZ%' 
+										  or texto LIKE '%SoyHumanista%' 
+										  or texto LIKE '%PartidoHumanista%' 
+										  or texto LIKE '%UnidadHumanista%' 
+										  or texto LIKE '%Humanista%' 
+										  or texto LIKE '%TodosConL8cho%' 
+										  or texto LIKE '%CambiarLaHistoria%' 
+										  or texto LIKE '%MovimientoCiudadano%' 
+										  or texto LIKE '%DefiendeColima%' 
+										  or texto LIKE '%leonciomoranL8%' 
+										  or texto LIKE '%CambiarLaHistoria%' 
+										  or texto LIKE '%SigueColima%' 
+										  or texto LIKE '%Locho%' 
+										  or texto LIKE '%Locho Morán%' 
+										  or texto LIKE '%PRDcolima%' 
+										  or texto LIKE '%PRD%' 
+										  or texto LIKE '%ComoTú%' 
+										  or texto LIKE '%ComoTu%' 
+										  or texto LIKE '%EsHoraDelPRD%' 
+										  or texto LIKE '%SomosPRD%' 
+										  or texto LIKE '%SabemosGobernar%' 
+										  or texto LIKE '%NuevaIzquierda%'
+										  or texto LIKE '%MarthaZepeda_%' 
+										  or texto LIKE '%DebateColima%')");
 			$a = array(
-                "gobernadores" => $resultado_gobernadores->result(),
-                "dipFederales" => $resultado_dipFederales->result(),
-                "dipLocales" => $resultado_dipLocales->result(),
-                "presidentes" => $resultado_Presidentes->result()
+                "gobernadores" => $resultado_gobernadores->result()
 	        );	            
 	        return $a;
 		}
@@ -1895,27 +1793,58 @@
 		//Obtener hashtags Gobernadores para la Nube de palabras
 		public function obtener_hashtags_gobernadores($mes)
 		{	
-			$hashtags=$this->db->query("SELECT hashtags FROM `twitt` WHERE (hashtags LIKE '%nachoperaltacol%' or hashtags 
-										LIKE '%jips%' or hashtags LIKE '%JuntosNadieNosPara%' or hashtags LIKE '%JIPS2015%' 
-										or hashtags LIKE '%MiSelfiecoNacho%'or hashtags LIKE '%DesdeAbajoConTrabajo%' 
-										or hashtags LIKE '%ConNachoSeguro%' or hashtags LIKE '%NachoGobernador%' or hashtags LIKE '%VotaPri%'
-										or hashtags LIKE '%NachoVotoSeguro%' or hashtags LIKE '%NachoColimaEstaContigo%' or hashtags LIKE '%NachoGano%'
-										or hashtags LIKE '%FormulaGanadora%'
-										or hashtags LIKE '%ClaroQuePodemos %' or hashtags LIKE '%NachoPropone%' or hashtags LIKE '%JorgeLuis%' or hashtags 
-										LIKE '%AlegrateYaSeVan%' or hashtags LIKE '%YaSeVan%' or hashtags LIKE '%JL_Preciado_%' 
-										or hashtags LIKE '%HagámosloNosotros%' or hashtags LIKE '%TúTienesElPodio%' or hashtags 
-										LIKE '%EncuentroSocial%' or hashtags LIKE '%PartidoEncuentroSocial%' or hashtags 
-										LIKE '%PASALAVOZ%' or hashtags LIKE '%SoyHumanista%' or hashtags LIKE '%PartidoHumanista%' 
-										or hashtags LIKE '%UnidadHumanista%' or hashtags LIKE '%Humanista%' or hashtags LIKE 
-										'%TodosConL8cho%' or hashtags LIKE '%CambiarLaHistoria%' or hashtags LIKE '%MovimientoCiudadano%' 
-										or hashtags LIKE '%leonciomoranL8%' or hashtags LIKE '%SigueColima%' or hashtags LIKE '%PRDcolima%' or hashtags LIKE 
-										'%PRD%'or texto LIKE '%ComoTú%' or texto LIKE '%ComoTu%' or texto LIKE '%EsHoraDelPRD%' 
-										or hashtags LIKE '%SomosPRD%'or hashtags LIKE '%SabemosGobernar%' 
-										or hashtags LIKE '%NuevaIzquierda%'or hashtags LIKE '%MarthaZepeda_%' or hashtags LIKE '%DebateColima%'
-										or hashtags LIKE '%NachoGobernador%' or hashtags LIKE '%JTConNacho%' or hashtags LIKE '%JuntosHacemosMás%'
-										or hashtags LIKE '%JuntosHacemosMas%' or hashtags LIKE '%JuntosLoEstamosLogrando%' or hashtags LIKE '%LoEstamosLogrando%'
-										or hashtags LIKE '%ColimaEsAzul%' or hashtags LIKE '%NiUnPasoAtrásColima%'
-										or hashtags LIKE '%AlegrateYaSeFueron%' or hashtags LIKE '%AlégrateDeQueSeVanSeVan%') 
+			$hashtags=$this->db->query("SELECT hashtags FROM `twitt` WHERE (hashtags LIKE '%nachoperaltacol%' 
+										  or hashtags LIKE '%jips%' 
+										  or hashtags LIKE '%JuntosNadieNosPara%' 
+										  or hashtags LIKE '%JIPS2015%' 
+										  or hashtags LIKE '%MiSelfiecoNacho%'	
+										  or hashtags LIKE '%ConNachoSeguro%' 
+										  or hashtags LIKE '%NachoGobernador%' 
+										  or hashtags LIKE '%VotaPri%'
+										  or hashtags LIKE '%NachoVotoSeguro%' 
+										  or hashtags LIKE '%NachoColimaEstaContigo%' 
+										  or hashtags LIKE '%NachoGano%' 
+										  or hashtags LIKE '%FormulaGanadora%' 
+										  or hashtags LIKE '%JoveNachos%' 
+										  or hashtags LIKE '%JTConNacho%' 
+										  or hashtags LIKE '%JuntosHacemosMás%' 
+										  or hashtags LIKE '%JuntosLoEstamosLogrando%' 
+										  or hashtags LIKE '%LoEstamosLogrando%' 
+										  or hashtags LIKE '%nachoperalta%' 
+										  or hashtags LIKE '%NachoPropone%' 
+										  or hashtags LIKE '%JorgeLuis%' 
+										  or hashtags LIKE '%AlegrateYaSeVan%' 
+										  or hashtags LIKE '%DesdeAbajoConTrabajo%' 
+										  or hashtags LIKE '%ClaroQuePodemos%' 
+										  or hashtags LIKE '%YaSeVan%' 
+										  or hashtags LIKE '%JL_Preciado_%' 
+										  or hashtags LIKE '%AlégrateDeQueSeVanSeVan%' 
+										  or hashtags LIKE '%HagámosloNosotros%' 
+										  or hashtags LIKE '%TúTienesElPodio%' 
+										  or hashtags LIKE '%EncuentroSocial%' 
+										  or hashtags LIKE '%PartidoEncuentroSocial%' 
+										  or hashtags LIKE '%SoyHumanista%' 
+										  or hashtags LIKE '%PartidoHumanista%' 
+										  or hashtags LIKE '%UnidadHumanista%' 
+										  or hashtags LIKE '%Humanista%' 
+										  or hashtags LIKE '%TodosConL8cho%' 
+										  or hashtags LIKE '%CambiarLaHistoria%' 
+										  or hashtags LIKE '%MovimientoCiudadano%' 
+										  or hashtags LIKE '%DefiendeColima%' 
+										  or hashtags LIKE '%leonciomoranL8%' 
+										  or hashtags LIKE '%CambiarLaHistoria%' 
+										  or hashtags LIKE '%SigueColima%' 
+										  or hashtags LIKE '%LochoMorán%' 
+										  or hashtags LIKE '%PRDcolima%' 
+										  or hashtags LIKE '%PRD%' 
+										  or hashtags LIKE '%ComoTú%' 
+										  or hashtags LIKE '%ComoTu%' 
+										  or hashtags LIKE '%EsHoraDelPRD%' 
+										  or hashtags LIKE '%SomosPRD%' 
+										  or hashtags LIKE '%SabemosGobernar%' 
+										  or hashtags LIKE '%NuevaIzquierda%'
+										  or hashtags LIKE '%MarthaZepeda_%' 
+										  or hashtags LIKE '%DebateColima%') 
 										and MONTH(fecha) = '$mes'and hashtags <>''");
 			if($hashtags->num_rows()>0)
 			{

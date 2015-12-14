@@ -11,7 +11,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 <!--[if !IE]><!--> <html lang="es"> <!--<![endif]-->
 <!-- BEGIN HEAD -->
 <head>
-  <title>Dip. Federales</title> 
+  <title>Partidos</title> 
   <?php $this->load->view('comunes/header'); ?>
   <script src="<?php echo base_url()?>assets/twitter/jsapi.js"></script> 
   <script src="<?php echo base_url()?>assets/twitter/recarga_partidos.js"></script> 
@@ -64,7 +64,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
                           <li><a data-toggle="tab" href="#barras6" id="tab6">PT</a></li>
                           <li><a data-toggle="tab" href="#barras5" id="tab5">Partido Verde</a></li>
                           <li><a data-toggle="tab" href="#barras4" id="tab4">Mov. Ciudadano</a></li>
-                          <li><a data-toggle="tab" href="#barras7" id="tab7">MORENA</a></li>
+                          <li><a data-toggle="tab" href="#barras7" id="tab7">NOTICIEROS</a></li>
                         </ul>
                           <div class="tab-content" id="myTabContent"> <!--Inicia tab de pestañas-->
 
@@ -79,7 +79,8 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
                                               </div>
                                               <div class="widget-content">                                          
                                                   <div id="chart_div" style="height: 400px;"></div> 
-                                                  <div id="chart_div2" style="height: 400px;"></div>   
+                                                  <div id="chart_div2" style="height: 400px;"></div> 
+                                                  <div id="chart_div14" style="height: 400px;"></div>   
                                                   <div id="chart_div3" style="height: 400px;"></div>                       
                                                   <div id="chart_div4" style="height: 400px;"></div> 
                                                   <div id="chart_div5" style="height: 400px;"></div> 
@@ -362,10 +363,11 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
                                       <div class="span9">                                          
                                           <div data-fullscreen="false" data-title=".widget .widget-primary" data-icon="icon-facebook" class="widget widget-primary" id="graf">
                                               <div class="widget-header" style="background: #B20034">
-                                                  <i class="icon-bar-chart"> <strong><font size="3">MORENA</font></strong></i>                                              
+                                                  <i class="icon-bar-chart"> <strong><font size="3">NOTICIEROS</font></strong></i>                                              
                                               </div>
                                               <div class="widget-content">                                          
                                                   <div id="chart_div12" style="height: 400px;"></div> 
+                                                  <div id="chart_div13" style="height: 400px;"></div> 
                                                   <div id="con7"></div>  <!--Grafica despues de la consulta-->
                                               </div>
                                           </div> 
@@ -449,14 +451,14 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
     ?> 
     <?php //char2  
         $a2 = array();
-        foreach ($jips_2015 as $jips_2015) 
+        foreach ($SoyNachista as $SoyNachista) 
         {
             $a2[] = array(
-                "fecha" => $jips_2015->fecha,
-                "seguidores" => $jips_2015->seguidores,
-                "siguiendo" => $jips_2015->siguiendo,
-                "tweets" => $jips_2015->tweets,
-                "promedio" => ($jips_2015->seguidores+$jips_2015->siguiendo+$jips_2015->tweets)/3
+                "fecha" => $SoyNachista->fecha,
+                "seguidores" => $SoyNachista->seguidores,
+                "siguiendo" => $SoyNachista->siguiendo,
+                "tweets" => $SoyNachista->tweets,
+                "promedio" => ($SoyNachista->seguidores+$SoyNachista->siguiendo+$SoyNachista->tweets)/3
             );
         }                       
     ?> 
@@ -499,6 +501,21 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
             );
         }                       
     ?>
+
+    <?php //char14 coordinador de campaña de nacho  
+        $a14 = array();
+        foreach ($RomeroCoello as $RomeroCoello) 
+        {
+            $a14[] = array(
+                "fecha" => $RomeroCoello->fecha,
+                "seguidores" => $RomeroCoello->seguidores,
+                "siguiendo" => $RomeroCoello->siguiendo,
+                "tweets" => $RomeroCoello->tweets,
+                "promedio" => ($RomeroCoello->seguidores+$RomeroCoello->siguiendo+$RomeroCoello->tweets)/3
+            );
+        }                       
+    ?>
+
     ////////PAN
     <?php //char6  
         $a6 = array();
@@ -582,17 +599,32 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
             );
         }                       
     ?>
-    ////////MORENA
+    ////////angel guardian
     <?php //char12 
         $a12 = array();
-        foreach ($MorenaColima1 as $MorenaColima1) 
+        foreach ($angelguardianmx as $angelguardianmx) 
         {
             $a12[] = array(
-                "fecha" => $MorenaColima1->fecha,
-                "seguidores" => $MorenaColima1->seguidores,
-                "siguiendo" => $MorenaColima1->siguiendo,
-                "tweets" => $MorenaColima1->tweets,
-                "promedio" => ($MorenaColima1->seguidores+$MorenaColima1->siguiendo+$MorenaColima1->tweets)/3
+                "fecha" => $angelguardianmx->fecha,
+                "seguidores" => $angelguardianmx->seguidores,
+                "siguiendo" => $angelguardianmx->siguiendo,
+                "tweets" => $angelguardianmx->tweets,
+                "promedio" => ($angelguardianmx->seguidores+$angelguardianmx->siguiendo+$angelguardianmx->tweets)/3
+            );
+        }                       
+    ?>
+
+    ////////af medios
+    <?php //char13 
+        $a13 = array();
+        foreach ($AFmedios as $AFmedios) 
+        {
+            $a13[] = array(
+                "fecha" => $AFmedios->fecha,
+                "seguidores" => $AFmedios->seguidores,
+                "siguiendo" => $AFmedios->siguiendo,
+                "tweets" => $AFmedios->tweets,
+                "promedio" => ($AFmedios->seguidores+$AFmedios->siguiendo+$AFmedios->tweets)/3
             );
         }                       
     ?>
@@ -628,7 +660,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
         ]
       );  
       var options2 = {
-        title: '@JIPS2015',
+        title: '@SoyNachista',
         hAxis: {title: "Fecha"},
         seriesType: "bars",
         series: {3: {type: "line"}}
@@ -692,6 +724,26 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
       };
       var chart5 = new google.visualization.ComboChart(document.getElementById('chart_div5'));
       chart5.draw(data5, options5);
+
+      //////////////char14 coordinador de campaña de nacho
+    var data14 = google.visualization.arrayToDataTable(
+        [
+          ['Fecha', 'Seguidores', 'Siguiendo', 'Tweets', 'Promedio'],
+          <?php for ($i=0; $i<count($a14); $i++) {
+              ?>
+              ['<?php echo $a14[$i]['fecha'] ?>', <?php echo $a14[$i]['seguidores'] ?>, <?php echo $a14[$i]['siguiendo'] ?>, <?php echo $a14[$i]['tweets'] ?>, <?php echo $a14[$i]['promedio'] ?>],
+          <?php } ?>
+        ]
+      );  
+      var options14 = {
+        title: '@RomeroCoello',
+        hAxis: {title: "Fecha"},
+        seriesType: "bars",
+        series: {3: {type: "line"}}
+      };
+      var chart14 = new google.visualization.ComboChart(document.getElementById('chart_div14'));
+      chart14.draw(data14, options14);
+
     }
 
     //Sirve para hacer la grafica responsiva
@@ -715,7 +767,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
         ]
       );  
       var options6 = {
-        title: '@PANDColima',
+        title: '@JovenesPanCLQ',
         hAxis: {title: "Fecha"},
         seriesType: "bars",
         series: {3: {type: "line"}}
@@ -734,7 +786,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
         ]
       );  
       var options8 = {
-        title: '@cdepancolima',
+        title: '@UnidosPANColima',
         hAxis: {title: "Fecha"},
         seriesType: "bars",
         series: {3: {type: "line"}}
@@ -827,7 +879,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
       chart11.draw(data11, options11);      
     }
 
-    ////////////////////////////////////////MORENA
+    ////////////////////////////////////////ANGEL GUARDIAN
     function drawChart7() {
       var data12 = google.visualization.arrayToDataTable(
         [
@@ -839,13 +891,33 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
         ]
       );  
       var options12 = {
-        title: '@MorenaColima1',
+        title: '@angelguardianmx',
         hAxis: {title: "Fecha"},
         seriesType: "bars",
         series: {3: {type: "line"}}
       };
       var chart12 = new google.visualization.ComboChart(document.getElementById('chart_div12'));
-      chart12.draw(data12, options12);      
+      chart12.draw(data12, options12);   
+
+
+      //af medios
+      var data13 = google.visualization.arrayToDataTable(
+        [
+          ['Fecha', 'Seguidores', 'Siguiendo', 'Tweets', 'Promedio'],
+          <?php for ($i=0; $i<count($a13); $i++) {
+              ?>
+              ['<?php echo $a13[$i]['fecha'] ?>', <?php echo $a13[$i]['seguidores'] ?>, <?php echo $a13[$i]['siguiendo'] ?>, <?php echo $a13[$i]['tweets'] ?>, <?php echo $a13[$i]['promedio'] ?>],
+          <?php } ?>
+        ]
+      );  
+      var options13 = {
+        title: '@AFmedios',
+        hAxis: {title: "Fecha"},
+        seriesType: "bars",
+        series: {3: {type: "line"}}
+      };
+      var chart13 = new google.visualization.ComboChart(document.getElementById('chart_div13'));
+      chart13.draw(data13, options13);    
     }
   </script>
 

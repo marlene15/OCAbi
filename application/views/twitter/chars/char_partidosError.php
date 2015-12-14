@@ -5,7 +5,7 @@
     }else 
     if(<?php echo $existe ?>==0){
       $('#alert').show();
-      $('#alert').html('<div id="alert" class="alert alert-error"><button type="button" class="close" data-dismiss="alert"></button><strong><center>Fecha No Encontrada!</strong> La información se encuentra disponible a partir de la fecha: 4 Mayo 2015 al 3 de Junio 2015 y del 8 de Junio 2015 al <?php echo $ultima_fecha ?></center></div>');
+      $('#alert').html('<div id="alert" class="alert alert-error"><button type="button" class="close" data-dismiss="alert"></button><strong><center>Fecha No Encontrada!</strong> La información se encuentra disponible a partir de la fecha: 01 Diciembre 2015 al <?php echo $ultima_fecha ?></center></div>');
     }
     else{
     	$('#alert').hide(); 

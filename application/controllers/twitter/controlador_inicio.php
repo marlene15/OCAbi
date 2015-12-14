@@ -51,7 +51,7 @@ class Controlador_inicio extends CI_Controller {
 		$gobernadores = $this->modelo_consultas->obtener_cuenta_gobernadores($ultima_fecha); 	
 		//echo "Ultima fecha: ".$ultima_fecha;	
 		$fecha = $this->fechas->fecha_dd_mes_aaaa_edita($ultima_fecha);
-		$mes='03';
+		$mes='11';
 		$hashtags = $this->modelo_inicio->obtener_hashtags_gobernadores($mes);
 
 		$datos = array(
@@ -574,7 +574,7 @@ class Controlador_inicio extends CI_Controller {
 		$resultado = $this->modelo_consultas->obtener_cuenta_partidos(); 
 		$datos = array(
 						"pri" => $resultado['pri'],
-						"jips_2015" => $resultado['jips_2015'],
+						"SoyNachista" => $resultado['SoyNachista'],
 						"JIPSColima" => $resultado['JIPSColima'],
 						"jipsvdea" => $resultado['jipsvdea'],
 						"MiSelfiecoNacho" => $resultado['MiSelfiecoNacho'],
@@ -584,7 +584,9 @@ class Controlador_inicio extends CI_Controller {
 						"MovCiudadanoCol" => $resultado['MovCiudadanoCol'],
 						"ColPartidoVerde" => $resultado['ColPartidoVerde'],
 						"PT_Colima" => $resultado['PT_Colima'],
-						"MorenaColima1" => $resultado['MorenaColima1']
+						"angelguardianmx" => $resultado['angelguardianmx'],
+						"AFmedios" => $resultado['AFmedios'],
+						"RomeroCoello" => $resultado['RomeroCoello']
 	            	  );
 		$this->load->view('twitter/partidos',$datos);
 	}

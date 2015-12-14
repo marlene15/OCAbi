@@ -139,16 +139,16 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
                                                 <div class="controls input-append date form_date span12"  data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd" style="float:left">
                                                     <span class="add-on"><i class="icon-th"></i></span>
                                                     <span class="add-on"><i class="icon-remove"></i></span>
-                                                    <input class="form-control span9" size="15" type="text" value="" readonly id="fecha">
+                                                    <input class="form-control span9" size="15" type="text" value="" readonly id="fecha_inicioT" name="fecha_inicioT">
                                                 </div> 
                                                 <label>Fecha de término</label>
                                                 <div class="controls input-append date form_date span12"  data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd" style="float:left">
                                                     <span class="add-on"><i class="icon-th"></i></span>
                                                     <span class="add-on"><i class="icon-remove"></i></span>
-                                                    <input class="form-control span9" size="15" type="text" value="" readonly id="fecha">
+                                                    <input class="form-control span9" size="15" type="text" value="" readonly id="fecha_finT" name="fecha_finT">
                                                 </div>
-                                                <input type="hidden" name="vtab" id="vtab1" value="1">
-                                                <button type="submit" class="btn btn-primary btn-lg" title="Consultar" id="consulta">Consultar</button>
+                                                <input type="hidden" name="vtab1" id="vtab1" value="2">
+                                                <button type="submit" class="btn btn-primary btn-lg" title="Consultar" id="consulta2">Consultar</button>
                                               </center>
                                             </div> 
                                           </div>  
@@ -283,15 +283,15 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 <script type="text/javascript">
     $(document).ready(function(){                                        
-      $("#consulta").click(function(event) {
-        var fecha_inicio = document.getElementById("fecha_inicio").value; 
-        var fecha_fin = document.getElementById("fecha_fin").value;  
-        var vtab = document.getElementById("vtab2").value;
+      $("#consulta2").click(function(event) {
+        var fecha_inicio = document.getElementById("fecha_inicioT").value; 
+        var fecha_fin = document.getElementById("fecha_finT").value;  
+        var vtab1 = document.getElementById("vtab1").value;
                 
         var parametros = {
-                "fecha_inicio": fecha_inicio,
-                "fecha_fin": fecha_fin,
-                "vtab" : vtab
+                "fecha_inicioT": fecha_inicio,
+                "fecha_finT": fecha_fin,
+                "vtab1" : vtab1
         };
         $.ajax({                                            
           type:"post",

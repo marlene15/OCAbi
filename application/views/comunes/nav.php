@@ -200,13 +200,13 @@
                         </li>
                     </ul>
                 </li>
-                <li >
+                <!-- <li >
                         <a href="<?php echo site_url('facebook/controlador_inicio/rumbo');?>">
                         <i class="icon-road"></i> 
                         <span class="title">Rumbo al 7 de Junio</span>
                         <span class="selected"></span>
                     </a>
-                </li>
+                </li> -->
                 <li >
                     <a href="<?php echo site_url('inicio/comoVamos');?>">
                         <i class="icon-group"></i> 

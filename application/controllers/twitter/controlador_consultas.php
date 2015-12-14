@@ -44,15 +44,21 @@ class Controlador_consultas extends CI_Controller {
 		$fecha = $this->input->post('fecha');	
 		$vtab = $this->input->post('vtab');
 		$fecha_nueva="";
-		if($fecha!=null)
-		{
+		if($fecha!=null){
 			$fecha_nueva=$this->fechas->fecha_dd_mes_aaaa($fecha);
 		}
 		else{
 			$fecha_nueva='NULL';
 		}
-		$ExisteFecha = $this->modelo_consultas->ExisteFecha($fecha_nueva);
+
 		$existe = 0;
+		if($fecha_nueva >= '2015-12-01'){
+			$ExisteFecha = $this->modelo_consultas->ExisteFecha($fecha_nueva);
+		}
+		else{
+			$ExisteFecha = 2;
+		}		
+		
 		if ($ExisteFecha==1) 
 		{ //Si existe la fecha consultada 
 			$gobernadores = $this->modelo_consultas->obtener_cuenta_gobernadores($fecha_nueva); 
@@ -579,7 +585,7 @@ class Controlador_consultas extends CI_Controller {
 			$cuentas = $this->modelo_consultas->obtener_cuenta_partidos_rango($fecha_inicio,$fecha_fin);	
 			$datos = array(
 							"pri" => $cuentas['pri'],
-							"jips_2015" => $cuentas['jips_2015'],
+							"SoyNachista" => $cuentas['SoyNachista'],
 							"JIPSColima" => $cuentas['JIPSColima'],
 							"jipsvdea" => $cuentas['jipsvdea'],
 							"MiSelfiecoNacho" => $cuentas['MiSelfiecoNacho'],
@@ -589,7 +595,9 @@ class Controlador_consultas extends CI_Controller {
 							"MovCiudadanoCol" => $cuentas['MovCiudadanoCol'],
 							"ColPartidoVerde" => $cuentas['ColPartidoVerde'],
 							"PT_Colima" => $cuentas['PT_Colima'],
-							"MorenaColima1" => $cuentas['MorenaColima1'],
+							"angelguardianmx" => $cuentas['angelguardianmx'],
+							"AFmedios" => $cuentas['AFmedios'],
+							"RomeroCoello" => $cuentas['RomeroCoello'],
 							"fecha_inicio" => $fecha_inicio,
 		                	"fecha_fin" => $fecha_fin,
 		                	"vtab" => $vtab,
@@ -603,16 +611,16 @@ class Controlador_consultas extends CI_Controller {
 	public function rango_comoVamos()
 	{
 		$this->load->library('fechas');
-		$fecha_inicio = $this->input->post('fecha_inicio');
-		$fecha_inicio=$this->fechas->fecha_dd_mes_aaaa($fecha_inicio);
+		$fecha_inicio = $this->input->post('fecha_inicioT');		
+		$fecha_inicio=$this->fechas->fecha_dd_mes_aaaa($fecha_inicio);		
 		$ExisteFechaInicio = $this->modelo_consultas->ExisteFecha($fecha_inicio);
 
-		$fecha_fin = $this->input->post('fecha_fin');
+		$fecha_fin = $this->input->post('fecha_finT');
 		$fecha_fin=$this->fechas->fecha_dd_mes_aaaa($fecha_fin);
 		$ExisteFechaFin = $this->modelo_consultas->ExisteFecha($fecha_fin);
 		$ultima_fecha = $this->modelo_inicio->obtener_ultima_fecha();
 		$ultima_fecha = $this->fechas->fecha_dd_mes_aaaa_edita($ultima_fecha->ultima_fecha);
-		$vtab = $this->input->post('vtab');
+		$vtab = $this->input->post('vtab1');
 
 		$fechaInicioMayor = 0;
 		$existe = 1;
@@ -636,7 +644,7 @@ class Controlador_consultas extends CI_Controller {
 		            	  );
 			$this->load->view('twitter/chars/char_partidosError',$datos);
 		}
-		if ($fechaInicioMayor!=1 and $existe!=0){			
+		if ($fechaInicioMayor!=1 and $existe!=0){	
 			$cuentas = $this->modelo_consultas->obtener_cuenta_comoVamos_rango($fecha_inicio,$fecha_fin);	
 			$datos = array(
 							"comoVamos" => $cuentas['comoVamos'],
@@ -655,10 +663,7 @@ class Controlador_consultas extends CI_Controller {
 		$armeria = $this->modelo_inicio->obtener_coordenadas('Armería');	
 
 		$datos = array(
-						"gobernadores_armeria" => $armeria['gobernadores'],
-						"dipFederales_armeria" => $armeria['dipFederales'],
-						"dipLocales_armeria" => $armeria['dipLocales'],
-						"presidentes_armeria" => $armeria['presidentes']
+						"gobernadores_armeria" => $armeria['gobernadores']
 	            	  );
 		$this->load->view('twitter/maps/mapa_coordenadas',$datos);	
 	}
@@ -668,10 +673,7 @@ class Controlador_consultas extends CI_Controller {
 		$colima = $this->modelo_inicio->obtener_coordenadas('Colima'); 
 
 		$datos = array(
-						"gobernadores_colima" => $colima['gobernadores'],
-						"dipFederales_colima" => $colima['dipFederales'],
-						"dipLocales_colima" => $colima['dipLocales'],
-						"presidentes_colima" => $colima['presidentes']
+						"gobernadores_colima" => $colima['gobernadores']
 	            	  );
 		$this->load->view('twitter/chars/mapas/char_mapa_colima',$datos);	
 	}
@@ -680,10 +682,7 @@ class Controlador_consultas extends CI_Controller {
 		$comala = $this->modelo_inicio->obtener_coordenadas('Comala'); 
 
 		$datos = array(
-						"gobernadores_comala" => $comala['gobernadores'],
-						"dipFederales_comala" => $comala['dipFederales'],
-						"dipLocales_comala" => $comala['dipLocales'],
-						"presidentes_comala" => $comala['presidentes']
+						"gobernadores_comala" => $comala['gobernadores']
 	            	  );
 		$this->load->view('twitter/chars/mapas/char_mapa_comala',$datos);	
 	}
@@ -693,10 +692,7 @@ class Controlador_consultas extends CI_Controller {
 		$coqui = $this->modelo_inicio->obtener_coordenadas('Coquimatlán');
 
 		$datos = array(
-						"gobernadores_coqui" => $coqui['gobernadores'],
-						"dipFederales_coqui" => $coqui['dipFederales'],
-						"dipLocales_coqui" => $coqui['dipLocales'],
-						"presidentes_coqui" => $coqui['presidentes']
+						"gobernadores_coqui" => $coqui['gobernadores']
 	            	  );
 		$this->load->view('twitter/chars/mapas/char_mapa_coqui',$datos);	
 	}
@@ -706,10 +702,7 @@ class Controlador_consultas extends CI_Controller {
 		$cuau = $this->modelo_inicio->obtener_coordenadas('Cuauhtémoc');
 
 		$datos = array(
-						"gobernadores_cuau" => $cuau['gobernadores'],
-						"dipFederales_cuau" => $cuau['dipFederales'],
-						"dipLocales_cuau" => $cuau['dipLocales'],
-						"presidentes_cuau" => $cuau['presidentes']
+						"gobernadores_cuau" => $cuau['gobernadores']
 	            	  );
 		$this->load->view('twitter/chars/mapas/char_mapa_cuau',$datos);	
 	}
@@ -719,10 +712,7 @@ class Controlador_consultas extends CI_Controller {
 		$ixtlahuacan = $this->modelo_inicio->obtener_coordenadas('Ixtlahuacán');
 
 		$datos = array(
-						"gobernadores_ixtlahuacan" => $ixtlahuacan['gobernadores'],
-						"dipFederales_ixtlahuacan" => $ixtlahuacan['dipFederales'],
-						"dipLocales_ixtlahuacan" => $ixtlahuacan['dipLocales'],
-						"presidentes_ixtlahuacan" => $ixtlahuacan['presidentes']
+						"gobernadores_ixtlahuacan" => $ixtlahuacan['gobernadores']
 	            	  );
 		$this->load->view('twitter/chars/mapas/char_mapa_ixtlahuacan',$datos);	
 	}
@@ -732,10 +722,7 @@ class Controlador_consultas extends CI_Controller {
 		$manzanillo = $this->modelo_inicio->obtener_coordenadas('Manzanillo');
 
 		$datos = array(
-						"gobernadores_manzanillo" => $manzanillo['gobernadores'],
-						"dipFederales_manzanillo" => $manzanillo['dipFederales'],
-						"dipLocales_manzanillo" => $manzanillo['dipLocales'],
-						"presidentes_manzanillo" => $manzanillo['presidentes']
+						"gobernadores_manzanillo" => $manzanillo['gobernadores']
 	            	  );
 		$this->load->view('twitter/chars/mapas/char_mapa_manzanillo',$datos);	
 	}
@@ -745,10 +732,7 @@ class Controlador_consultas extends CI_Controller {
 		$mina = $this->modelo_inicio->obtener_coordenadas('Minatitlán');
 
 		$datos = array(
-						"gobernadores_mina" => $mina['gobernadores'],
-						"dipFederales_mina" => $mina['dipFederales'],
-						"dipLocales_mina" => $mina['dipLocales'],
-						"presidentes_mina" => $mina['presidentes']
+						"gobernadores_mina" => $mina['gobernadores']
 	            	  );
 		$this->load->view('twitter/chars/mapas/char_mapa_mina',$datos);	
 	}
@@ -758,10 +742,7 @@ class Controlador_consultas extends CI_Controller {
 		$tecoman = $this->modelo_inicio->obtener_coordenadas('Tecomán');
 
 		$datos = array(
-						"gobernadores_tecoman" => $tecoman['gobernadores'],
-						"dipFederales_tecoman" => $tecoman['dipFederales'],
-						"dipLocales_tecoman" => $tecoman['dipLocales'],
-						"presidentes_tecoman" => $tecoman['presidentes']
+						"gobernadores_tecoman" => $tecoman['gobernadores']
 	            	  );
 		$this->load->view('twitter/chars/mapas/char_mapa_tecoman',$datos);	
 	}
@@ -771,10 +752,7 @@ class Controlador_consultas extends CI_Controller {
 		$villa = $this->modelo_inicio->obtener_coordenadas('Villa de Álvarez'); 
 
 		$datos = array(
-						"gobernadores_villa" => $villa['gobernadores'],
-						"dipFederales_villa" => $villa['dipFederales'],
-						"dipLocales_villa" => $villa['dipLocales'],
-						"presidentes_villa" => $villa['presidentes']
+						"gobernadores_villa" => $villa['gobernadores']
 	            	  );
 		$this->load->view('twitter/chars/mapas/char_mapa_villa',$datos);	
 	}
