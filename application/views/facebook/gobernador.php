@@ -138,10 +138,10 @@
                                 </br></br>
                                 <div class="btn-toolbar" align="left"> 
                                   <div class="btn-group-vertical">
-                                    <a class="btn btn-success btn-lg active" id="consulta_nube"> Marzo</a>
-                                    <a class="btn btn-primary btn-lg" id="consulta_nube2"> Abril</a>
-                                    <a class="btn btn-primary btn-lg" id="consulta_nube3"> Mayo</a>
-                                    <a class="btn btn-primary btn-lg" id="consulta_nube4"> Junio</a>
+                                    <a class="btn btn-success btn-lg active" id="consulta_nube3"> Noviembre</a>
+                                    <a class="btn btn-primary btn-lg" id="consulta_nube4"> Diciembre</a>
+                                     <!--<a class="btn btn-primary btn-lg" id="consulta_nube3"> Mayo</a>
+                                    <a class="btn btn-primary btn-lg" id="consulta_nube4"> Junio</a>-->
                                   </div>
                                 </div>
                               </div>                               

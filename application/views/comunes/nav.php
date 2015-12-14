@@ -106,24 +106,6 @@
                                         <span class="selected"></span>
                                     </a>
                                 </li>
-                                <!-- <li >
-                                    <a href="<?php //echo site_url('facebook/controlador_inicio/valoracion_DF');?>"> 
-                                        <span class="title">Diputado Federal</span>
-                                        <span class="selected"></span>
-                                    </a>
-                                </li>
-                                <li >
-                                    <a href="<?php //echo site_url('facebook/controlador_inicio/valoracion_DL');?>"> 
-                                        <span class="title">Diputado Local</span>
-                                        <span class="selected"></span>
-                                    </a>
-                                </li>
-                                <li >
-                                    <a href="<?php //echo site_url('facebook/controlador_inicio/valoracion_PM');?>"> 
-                                        <span class="title">Presidente Municipal</span>
-                                        <span class="selected"></span>
-                                    </a>
-                                </li> -->
                             </ul>
                         </li>
                         <li>
@@ -139,24 +121,6 @@
                                         <span class="selected"></span>
                                     </a>
                                 </li>
-                                <!-- <li >
-                                    <a href="<?php //echo site_url('twitter/controlador_inicio/valoracion_DipFederales');?>"> 
-                                        <span class="title">Diputado Federal</span>
-                                        <span class="selected"></span>
-                                    </a>
-                                </li>
-                                <li >
-                                    <a href="<?php //echo site_url('twitter/controlador_inicio/valoracion_DipLocales');?>"> 
-                                        <span class="title">Diputado Local</span>
-                                        <span class="selected"></span>
-                                    </a>
-                                </li>
-                                <li >
-                                    <a href="<?php //echo site_url('twitter/controlador_inicio/valoracion_Presidentes');?>"> 
-                                        <span class="title">Presidente Municipal</span>
-                                        <span class="selected"></span>
-                                    </a>
-                                </li> -->
                             </ul>
                         </li>
                     </ul>
@@ -184,13 +148,14 @@
                         <span class="arrow "></span>
                     </a>
                     <ul class="sub-menu">
+                        <!--
                         <li>
                             <a href="<?php echo site_url('facebook/controlador_inicio/partidost');?>">
                                 <i class="icon-facebook"></i> 
                                 <span class="title">Facebook</span>
                                 <span class="selected"></span>
                             </a>
-                        </li>
+                        </li>-->
                         <li>
                             <a href="<?php echo site_url('twitter/controlador_inicio/partidos');?>">
                                 <i class="icon-twitter"></i> 
@@ -200,19 +165,60 @@
                         </li>
                     </ul>
                 </li>
-                <!-- <li >
-                        <a href="<?php echo site_url('facebook/controlador_inicio/rumbo');?>">
-                        <i class="icon-road"></i> 
-                        <span class="title">Rumbo al 7 de Junio</span>
-                        <span class="selected"></span>
-                    </a>
-                </li> -->
                 <li >
-                    <a href="<?php echo site_url('inicio/comoVamos');?>">
-                        <i class="icon-group"></i> 
-                        <span class="title">¿Cómo vamos Colima?</span>
-                        <span class="selected"></span>
+                    <a href="javascript:;">
+                        <i class="icon-tags"></i> 
+                        <span class="title">Sitios de Interés</span>
+                        <span class="arrow "></span>
                     </a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="javascript:;">
+                                <i class="icon-facebook"></i> 
+                                <span class="title">Facebook</span>
+                                <span class="arrow "></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li >
+                                    <a href="<?php echo site_url('');?>"> 
+                                        <span class="title">¿Cómo Vamos Colima?</span>
+                                        <span class="selected"></span>
+                                    </a>
+                                </li>
+                                <li >
+                                    <a href="<?php echo site_url('');?>"> 
+                                        <span class="title">Soy Nachista</span>
+                                        <span class="selected"></span>
+                                    </a>
+                                </li>
+                                <li >
+                                    <a href="<?php echo site_url('');?>"> 
+                                        <span class="title">Ángel Guardián</span>
+                                        <span class="selected"></span>
+                                    </a>
+                                </li>
+                                <li >
+                                    <a href="<?php echo site_url('');?>"> 
+                                        <span class="title">Afmedios Noticia</span>
+                                        <span class="selected"></span>
+                                    </a>
+                                </li>     
+                                <li >
+                                    <a href="<?php echo site_url('');?>"> 
+                                        <span class="title">José Manuel Romero Coellón</span>
+                                        <span class="selected"></span>
+                                    </a>
+                                </li>                                                             
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <i class="icon-twitter"></i> 
+                                <span class="title">Twitter</span>
+                                <span class="arrow "></span>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
                 <li >
                     <a href="<?php echo site_url('inicio/mineria_deDatos');?>">

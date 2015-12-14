@@ -84,8 +84,15 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
                                                     <div class="widget-header" style="background: #B20034">
                                                         <i class="icon-comments-alt"></i>
                                                         <h3>Valoración de Comentarios</h3>                                                    
-                                                    </div>
-                                                    <div class="widget-content">                                          
+                                                    </div>  
+                                                    <div class="widget-content">    
+                                                        <div class="container-fluid">
+                                                            <div class="row-fluid">
+                                                                <div class="span12">
+                                                                    <h3>Total: 844<!--<?php echo $totalN; ?>--> comentarios</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div>                                      
                                                         <div class="container-fluid">
                                                             <div class="row-fluid">
                                                                 <div class="span4">
@@ -125,7 +132,14 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
                                                         <i class="icon-comments-alt"></i>
                                                         <h3>Valoración de Comentarios</h3>                                                    
                                                     </div>
-                                                    <div class="widget-content">                                          
+                                                    <div class="widget-content">
+                                                        <div class="container-fluid">
+                                                            <div class="row-fluid">
+                                                                <div class="span12">
+                                                                    <h3>Total: 943<!--<?php echo $totalN; ?>--> comentarios</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div>                                           
                                                         <div class="container-fluid">
                                                             <div class="row-fluid">
                                                                 <div class="span4">
@@ -165,7 +179,14 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
                                                         <i class="icon-comments-alt"></i>
                                                         <h3>Valoración de Comentarios</h3>                                                    
                                                     </div>
-                                                    <div class="widget-content">                                          
+                                                    <div class="widget-content">
+                                                        <div class="container-fluid">
+                                                            <div class="row-fluid">
+                                                                <div class="span12">
+                                                                    <h3>Total: 211<!--<?php echo $totalN; ?>--> comentarios</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div>                                           
                                                         <div class="container-fluid">
                                                             <div class="row-fluid">
                                                                 <div class="span4">
@@ -205,7 +226,14 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
                                                         <i class="icon-comments-alt"></i>
                                                         <h3>Valoración de Comentarios</h3>                                                    
                                                     </div>
-                                                    <div class="widget-content">                                          
+                                                    <div class="widget-content"> 
+                                                        <div class="container-fluid">
+                                                            <div class="row-fluid">
+                                                                <div class="span12">
+                                                                    <h3>Total: 769<!--<?php echo $totalN; ?>--> comentarios</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div>                                          
                                                         <div class="container-fluid">
                                                             <div class="row-fluid">
                                                                 <div class="span4">
