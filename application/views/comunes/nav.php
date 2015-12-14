@@ -181,13 +181,7 @@
                             <ul class="sub-menu">
                                 <li >
                                     <a href="<?php echo site_url('');?>"> 
-                                        <span class="title">¿Cómo Vamos Colima?</span>
-                                        <span class="selected"></span>
-                                    </a>
-                                </li>
-                                <li >
-                                    <a href="<?php echo site_url('');?>"> 
-                                        <span class="title">Soy Nachista</span>
+                                        <span class="title">Afmedios Noticia</span>
                                         <span class="selected"></span>
                                     </a>
                                 </li>
@@ -199,13 +193,19 @@
                                 </li>
                                 <li >
                                     <a href="<?php echo site_url('');?>"> 
-                                        <span class="title">Afmedios Noticia</span>
+                                        <span class="title">¿Cómo Vamos Colima?</span>
+                                        <span class="selected"></span>
+                                    </a>
+                                </li>
+                                <li >
+                                    <a href="<?php echo site_url('');?>"> 
+                                        <span class="title">José Manuel Romero Coellón</span>
                                         <span class="selected"></span>
                                     </a>
                                 </li>     
                                 <li >
                                     <a href="<?php echo site_url('');?>"> 
-                                        <span class="title">José Manuel Romero Coellón</span>
+                                        <span class="title">Soy Nachista</span>
                                         <span class="selected"></span>
                                     </a>
                                 </li>                                                             
