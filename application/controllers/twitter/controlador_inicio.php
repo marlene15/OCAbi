@@ -42,6 +42,56 @@ class Controlador_inicio extends CI_Controller {
 			die();
 		}
 	}
+
+	//Como vamos Colima general
+	public function comoVamos()
+	{
+		$resultado = $this->modelo_consultas->obtener_cuenta_comoVamos();	
+		$datos = array(
+						"comoVamos" => $resultado['comoVamos']
+	            	  );
+		$this->load->view('twitter/comoVamos',$datos);
+	}
+
+	//Afmedios
+	public function afmedios()
+	{
+		$resultado = $this->modelo_consultas->obtener_cuenta_afmedios();	
+		$datos = array(
+						"afmedios" => $resultado['afmedios']
+	            	  );
+		$this->load->view('twitter/afmedios',$datos);
+	}
+
+	//Angel Guardian
+	public function angel()
+	{
+		$resultado = $this->modelo_consultas->obtener_cuenta_angel();	
+		$datos = array(
+						"angel" => $resultado['angel']
+	            	  );
+		$this->load->view('twitter/angel',$datos);
+	}
+
+	//José Manuel Coello
+	public function jmcoello()
+	{
+		$resultado = $this->modelo_consultas->obtener_cuenta_jmcoello();	
+		$datos = array(
+						"jmcoello" => $resultado['jmcoello']
+	            	  );
+		$this->load->view('twitter/jmcoello',$datos);
+	}
+
+	//soyNachista
+	public function soyNachista()
+	{
+		$resultado = $this->modelo_consultas->obtener_cuenta_soyNachista();	
+		$datos = array(
+						"soyNachista" => $resultado['soyNachista']
+	            	  );
+		$this->load->view('twitter/soyNachista',$datos);
+	}
 	
 	public function gobernadores()
 	{
@@ -574,7 +624,6 @@ class Controlador_inicio extends CI_Controller {
 		$resultado = $this->modelo_consultas->obtener_cuenta_partidos(); 
 		$datos = array(
 						"pri" => $resultado['pri'],
-						"SoyNachista" => $resultado['SoyNachista'],
 						"JIPSColima" => $resultado['JIPSColima'],
 						"jipsvdea" => $resultado['jipsvdea'],
 						"MiSelfiecoNacho" => $resultado['MiSelfiecoNacho'],
@@ -583,10 +632,7 @@ class Controlador_inicio extends CI_Controller {
 						"PRDcolima" => $resultado['PRDcolima'],
 						"MovCiudadanoCol" => $resultado['MovCiudadanoCol'],
 						"ColPartidoVerde" => $resultado['ColPartidoVerde'],
-						"PT_Colima" => $resultado['PT_Colima'],
-						"angelguardianmx" => $resultado['angelguardianmx'],
-						"AFmedios" => $resultado['AFmedios'],
-						"RomeroCoello" => $resultado['RomeroCoello']
+						"PT_Colima" => $resultado['PT_Colima']
 	            	  );
 		$this->load->view('twitter/partidos',$datos);
 	}

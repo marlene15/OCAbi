@@ -11,7 +11,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 <!--[if !IE]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 <!-- BEGIN HEAD -->
 <head>
-  <title>Como vamos Colima</title> 
+  <title>JmCoello</title> 
   <?php $this->load->view('comunes/header'); ?>
   <script src="<?php echo base_url()?>assets/twitter/jsapi.js"></script> 
   <script src="<?php echo base_url()?>assets/twitter/tabsDL.js"></script>
@@ -32,7 +32,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
                 <div class="row-fluid">
                     <div class="span12" id="encabezado">
                         <h3 class="page-title" id="titulo">
-                            Como vamos Colima <small>Actividad en Twitter </small>
+                            José Manuel Romero Coello <small>Actividad en Twitter </small>
                         </h3>
                         <ul class="breadcrumb" id="ul_menu">
                             <li>
@@ -42,7 +42,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
                             </li>
                             <li>
                                 <i class="icon-home"></i>
-                                <a href="<?php echo site_url('twitter/controlador_inicio/comoVamos'); ?>">Como Vamos Colima</a> 
+                                <a href="<?php echo site_url('twitter/controlador_inicio/jmcoello'); ?>">RomeroCoello</a> 
                             </li>                           
                         </ul>    
                     </div>
@@ -65,7 +65,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
                                             <div data-fullscreen="false" data-title=".widget .widget-primary" data-icon="icon-facebook" class="widget widget-primary" id="graf">
                                                 <div class="widget-header" style="background: #B20034">
                                                     <i class="icon-bar-chart"></i>
-                                                    <h3>ComoVamosColima</h3>                                                    
+                                                    <h3>José Manuel Romero Coello</h3>                                                    
                                                 </div>
                                                 <div class="widget-content">                                          
                                                     <center>
@@ -140,14 +140,14 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
     ////////comoVamos
     <?php //char2 TWITTER
         $a = array();
-        foreach ($comoVamos as $comoVamos) 
+        foreach ($jmcoello as $jmcoello) 
         {
             $a[] = array(
-                "fecha" => $comoVamos->fecha,
-                "seguidores" => $comoVamos->seguidores,
-                "siguiendo" => $comoVamos->siguiendo,
-                "tweets" => $comoVamos->tweets,
-                "promedio" => ($comoVamos->seguidores+$comoVamos->siguiendo+$comoVamos->tweets)/3
+                "fecha" => $jmcoello->fecha,
+                "seguidores" => $jmcoello->seguidores,
+                "siguiendo" => $jmcoello->siguiendo,
+                "tweets" => $jmcoello->tweets,
+                "promedio" => ($jmcoello->seguidores+$jmcoello->siguiendo+$jmcoello->tweets)/3
             );
         }                       
     ?> 
@@ -164,7 +164,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
         ]
       );  
       var options = {
-        title: '@Comovamoscolima',
+        title: '@RomeroCoello',
         hAxis: {title: "Fecha"},
         seriesType: "bars",
         series: {3: {type: "line"}}
@@ -210,7 +210,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
         $.ajax({                                            
           type:"post",
           data:parametros,
-          url: '<?php echo site_url('twitter/controlador_consultas/rango_comoVamos');?>',                                      
+          url: '<?php echo site_url('twitter/controlador_consultas/rango_jmcoello');?>',                                      
           dataType: 'html',
           success: function (html) {
             $('#con').html(html);   

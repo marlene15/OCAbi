@@ -19,19 +19,6 @@
                 );
             }                     
         ?> 
-        <?php //char2  
-            $a2 = array();
-            foreach ($SoyNachista as $SoyNachista) 
-            {
-                $a2[] = array(
-                    "fecha" => $SoyNachista->fecha,
-                    "seguidores" => $SoyNachista->seguidores,
-                    "siguiendo" => $SoyNachista->siguiendo,
-                    "tweets" => $SoyNachista->tweets,
-                    "promedio" => ($SoyNachista->seguidores+$SoyNachista->siguiendo+$SoyNachista->tweets)/3
-                );
-            }                       
-        ?>  
         <?php //char3  
             $a3 = array();
             foreach ($JIPSColima as $JIPSColima) 
@@ -70,22 +57,7 @@
                     "promedio" => ($MiSelfiecoNacho->seguidores+$MiSelfiecoNacho->siguiendo+$MiSelfiecoNacho->tweets)/3
                 );
             }                       
-        ?>
-
-        <?php //char14 coordinador de campaña de nacho  
-            $a14 = array();
-            foreach ($RomeroCoello as $RomeroCoello) 
-            {
-                $a14[] = array(
-                    "fecha" => $RomeroCoello->fecha,
-                    "seguidores" => $RomeroCoello->seguidores,
-                    "siguiendo" => $RomeroCoello->siguiendo,
-                    "tweets" => $RomeroCoello->tweets,
-                    "promedio" => ($RomeroCoello->seguidores+$RomeroCoello->siguiendo+$RomeroCoello->tweets)/3
-                );
-            }                       
-        ?>
-    
+        ?>    
 
         ////////////////////////////////////////PRI
         function drawChart() {
@@ -106,25 +78,6 @@
           };
           var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
           chart.draw(data, options);
-
-          //////////////char2
-          var data2 = google.visualization.arrayToDataTable(
-            [
-              ['Fecha', 'Seguidores', 'Siguiendo', 'Tweets', 'Promedio'],
-              <?php for ($i=0; $i<count($a2); $i++) {
-                  ?>
-                  ['<?php echo $a2[$i]['fecha'] ?>', <?php echo $a2[$i]['seguidores'] ?>, <?php echo $a2[$i]['siguiendo'] ?>, <?php echo $a2[$i]['tweets'] ?>, <?php echo $a2[$i]['promedio'] ?>],
-              <?php } ?>
-            ]
-          );  
-          var options2 = {
-            title: '@JIPS2015',
-            hAxis: {title: "Fecha"},
-            seriesType: "bars",
-            series: {3: {type: "line"}}
-          };
-          var chart2 = new google.visualization.ComboChart(document.getElementById('chart_div2'));
-          chart2.draw(data2, options2);
 
           //////////////char3
           var data3 = google.visualization.arrayToDataTable(
@@ -183,35 +136,12 @@
             var chart5 = new google.visualization.ComboChart(document.getElementById('chart_div5'));
             chart5.draw(data5, options5);
 
-
-            //////////////char14 coordinador de campaña de nacho
-            var data14 = google.visualization.arrayToDataTable(
-                [
-                  ['Fecha', 'Seguidores', 'Siguiendo', 'Tweets', 'Promedio'],
-                  <?php for ($i=0; $i<count($a14); $i++) {
-                      ?>
-                      ['<?php echo $a14[$i]['fecha'] ?>', <?php echo $a14[$i]['seguidores'] ?>, <?php echo $a14[$i]['siguiendo'] ?>, <?php echo $a14[$i]['tweets'] ?>, <?php echo $a14[$i]['promedio'] ?>],
-                  <?php } ?>
-                ]
-              );  
-              var options14 = {
-                title: '@RomeroCoello',
-                hAxis: {title: "Fecha"},
-                seriesType: "bars",
-                series: {3: {type: "line"}}
-              };
-              var chart14 = new google.visualization.ComboChart(document.getElementById('chart_div14'));
-              chart14.draw(data14, options14);
-
-
       }
       drawChart();
-      $('#chart_div').width('100%');  
-      $('#chart_div2').width('100%');  
+      $('#chart_div').width('100%');    
       $('#chart_div3').width('100%');  
       $('#chart_div4').width('100%');  
-      $('#chart_div5').width('100%'); 
-      $('#chart_div14').width('100%'); 
+      $('#chart_div5').width('100%');  
     };   
   };   
 
@@ -471,86 +401,6 @@
       }
       drawChart6();
       $('#chart_div11').width('100%');  
-    }; 
-
-  if (<?php echo $vtab ?>==7) {   
-    if (<?php echo $fechaInicioMayor ?><1 && <?php echo $existe ?>>0)
-    {
-        $('#alert').hide(); 
-        google.load("visualization", "1", {packages: ["corechart"]});    
-        google.setOnLoadCallback(drawChart);
-        ////////angel guardian
-        <?php //char12 
-            $a12 = array();
-            foreach ($angelguardianmx as $angelguardianmx) 
-            {
-                $a12[] = array(
-                    "fecha" => $angelguardianmx->fecha,
-                    "seguidores" => $angelguardianmx->seguidores,
-                    "siguiendo" => $angelguardianmx->siguiendo,
-                    "tweets" => $angelguardianmx->tweets,
-                    "promedio" => ($angelguardianmx->seguidores+$angelguardianmx->siguiendo+$angelguardianmx->tweets)/3
-                );
-            }                       
-        ?>
-
-        ////////af medios
-        <?php //char13 
-            $a13 = array();
-            foreach ($AFmedios as $AFmedios) 
-            {
-                $a13[] = array(
-                    "fecha" => $AFmedios->fecha,
-                    "seguidores" => $AFmedios->seguidores,
-                    "siguiendo" => $AFmedios->siguiendo,
-                    "tweets" => $AFmedios->tweets,
-                    "promedio" => ($AFmedios->seguidores+$AFmedios->siguiendo+$AFmedios->tweets)/3
-                );
-            }                       
-        ?>
-         function drawChart7() {
-            var data12 = google.visualization.arrayToDataTable(
-              [
-                ['Fecha', 'Seguidores', 'Siguiendo', 'Tweets', 'Promedio'],
-                <?php for ($i=0; $i<count($a12); $i++) {
-                    ?>
-                    ['<?php echo $a12[$i]['fecha'] ?>', <?php echo $a12[$i]['seguidores'] ?>, <?php echo $a12[$i]['siguiendo'] ?>, <?php echo $a12[$i]['tweets'] ?>, <?php echo $a12[$i]['promedio'] ?>],
-                <?php } ?>
-              ]
-            );  
-            var options12 = {
-              title: '@angelguardianmx',
-              hAxis: {title: "Fecha"},
-              seriesType: "bars",
-              series: {3: {type: "line"}}
-            };
-            var chart12 = new google.visualization.ComboChart(document.getElementById('chart_div12'));
-            chart12.draw(data12, options12);   
-
-
-            //af medios
-            var data13 = google.visualization.arrayToDataTable(
-              [
-                ['Fecha', 'Seguidores', 'Siguiendo', 'Tweets', 'Promedio'],
-                <?php for ($i=0; $i<count($a13); $i++) {
-                    ?>
-                    ['<?php echo $a13[$i]['fecha'] ?>', <?php echo $a13[$i]['seguidores'] ?>, <?php echo $a13[$i]['siguiendo'] ?>, <?php echo $a13[$i]['tweets'] ?>, <?php echo $a13[$i]['promedio'] ?>],
-                <?php } ?>
-              ]
-            );  
-            var options13 = {
-              title: '@AFmedios',
-              hAxis: {title: "Fecha"},
-              seriesType: "bars",
-              series: {3: {type: "line"}}
-            };
-            var chart13 = new google.visualization.ComboChart(document.getElementById('chart_div13'));
-            chart13.draw(data13, options13);    
-          }
-      }
-      drawChart7();
-      $('#chart_div12').width('100%');  
-      $('#chart_div13').width('100%'); 
     }; 
   </script>
 

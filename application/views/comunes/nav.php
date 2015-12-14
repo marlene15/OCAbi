@@ -199,7 +199,7 @@
                                 </li>
                                 <li >
                                     <a href="<?php echo site_url('');?>"> 
-                                        <span class="title">José Manuel Romero Coellón</span>
+                                        <span class="title">José Manuel Romero Coello</span>
                                         <span class="selected"></span>
                                     </a>
                                 </li>     
@@ -211,15 +211,50 @@
                                 </li>                                                             
                             </ul>
                         </li>
+
                         <li>
                             <a href="javascript:;">
                                 <i class="icon-twitter"></i> 
                                 <span class="title">Twitter</span>
                                 <span class="arrow "></span>
                             </a>
+                            <ul class="sub-menu">
+                                <li >
+                                    <a href="<?php echo site_url('twitter/controlador_inicio/afmedios');?>"> 
+                                        <span class="title">Afmedios Noticia</span>
+                                        <span class="selected"></span>
+                                    </a>
+                                </li>
+                                <li >
+                                    <a href="<?php echo site_url('twitter/controlador_inicio/angel');?>"> 
+                                        <span class="title">Ángel Guardián</span>
+                                        <span class="selected"></span>
+                                    </a>
+                                </li>
+                                <li >
+                                    <a href="<?php echo site_url('twitter/controlador_inicio/comoVamos');?>"> 
+                                        <span class="title">¿Cómo Vamos Colima?</span>
+                                        <span class="selected"></span>
+                                    </a>
+                                </li>
+                                <li >
+                                    <a href="<?php echo site_url('twitter/controlador_inicio/jmcoello');?>"> 
+                                        <span class="title">José Manuel Romero Coello</span>
+                                        <span class="selected"></span>
+                                    </a>
+                                </li>     
+                                <li >
+                                    <a href="<?php echo site_url('twitter/controlador_inicio/soyNachista');?>"> 
+                                        <span class="title">Soy Nachista</span>
+                                        <span class="selected"></span>
+                                    </a>
+                                </li>                                                             
+                            </ul>
                         </li>
                     </ul>
+
                 </li>
+
                 <li >
                     <a href="<?php echo site_url('inicio/mineria_deDatos');?>">
                         <i class="icon-eye-open"></i> 

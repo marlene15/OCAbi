@@ -324,16 +324,12 @@
 		{
 			$pri = $this->db->query("SELECT usuario, seguidores, siguiendo, tweets, fecha from cuentas 
 									  where fecha >= '2015-12-01' and usuario = 'PRI_Colima' ORDER BY fecha ASC");
-			$SoyNachista = $this->db->query("SELECT usuario, seguidores, siguiendo, tweets, fecha from cuentas 
-									  where fecha >= '2015-12-01' and usuario = 'SoyNachista' ORDER BY fecha ASC");
 			$JIPSColima = $this->db->query("SELECT usuario, seguidores, siguiendo, tweets, fecha from cuentas 
 									  where fecha >= '2015-12-01' and usuario = 'JIPSColima' ORDER BY fecha ASC");
 			$jipsvdea = $this->db->query("SELECT usuario, seguidores, siguiendo, tweets, fecha from cuentas 
 									  where fecha >= '2015-12-01' and usuario = 'jipsvdea' ORDER BY fecha ASC");
 			$MiSelfiecoNacho = $this->db->query("SELECT usuario, seguidores, siguiendo, tweets, fecha from cuentas 
 									  where fecha >= '2015-12-01' and usuario = 'MiSelfiecoNacho' ORDER BY fecha ASC");
-			$RomeroCoello = $this->db->query("SELECT usuario, seguidores, siguiendo, tweets, fecha from cuentas 
-									  where fecha >= '2015-12-01' and usuario = 'RomeroCoello' ORDER BY fecha ASC");
 			$PANDColima = $this->db->query("SELECT usuario, seguidores, siguiendo, tweets, fecha from cuentas 
 									  where fecha >= '2015-12-01' and usuario = 'JovenesPanCLQ' ORDER BY fecha ASC");
 			$cdepancolima = $this->db->query("SELECT usuario, seguidores, siguiendo, tweets, fecha from cuentas 
@@ -346,14 +342,9 @@
 									  where fecha >= '2015-12-01' and usuario = 'ColPartidoVerde' ORDER BY fecha ASC");
 			$PT_Colima = $this->db->query("SELECT usuario, seguidores, siguiendo, tweets, fecha from cuentas 
 									  where fecha >= '2015-12-01' and usuario = 'PT_Colima' ORDER BY fecha ASC");
-			$angelguardianmx = $this->db->query("SELECT usuario, seguidores, siguiendo, tweets, fecha from cuentas 
-									  where fecha >= '2015-12-01' and usuario = 'angelguardianmx' ORDER BY fecha ASC");		
-			$AFmedios = $this->db->query("SELECT usuario, seguidores, siguiendo, tweets, fecha from cuentas 
-									  where fecha >= '2015-12-01' and usuario = 'AFmedios' ORDER BY fecha ASC");	
-
+			
 			$a = array(
                 "pri" => $pri->result(),
-                "SoyNachista" => $SoyNachista->result(),
                 "JIPSColima" => $JIPSColima->result(),
                 "jipsvdea" => $jipsvdea->result(),
                 "MiSelfiecoNacho" => $MiSelfiecoNacho->result(),
@@ -362,10 +353,7 @@
                 "PRDcolima" => $PRDcolima->result(),
                 "MovCiudadanoCol" => $MovCiudadanoCol->result(),
                 "ColPartidoVerde" => $ColPartidoVerde->result(),
-                "PT_Colima" => $PT_Colima->result(),
-                "angelguardianmx" => $angelguardianmx->result(),
-                "AFmedios" => $AFmedios->result(),
-                "RomeroCoello" => $RomeroCoello->result()
+                "PT_Colima" => $PT_Colima->result()
             );
             return $a;
 		}
@@ -375,9 +363,6 @@
 			$pri = $this->db->query("SELECT usuario, seguidores, siguiendo, tweets, fecha from cuentas 
 									  where usuario = 'PRI_Colima' and fecha BETWEEN '$fecha_inicio' AND '$fecha_fin' 
 									  ORDER BY fecha ASC");
-			$SoyNachista = $this->db->query("SELECT usuario, seguidores, siguiendo, tweets, fecha from cuentas 
-									  where usuario = 'SoyNachista' and fecha BETWEEN '$fecha_inicio' AND '$fecha_fin'
-									  ORDER BY fecha ASC");
 			$JIPSColima = $this->db->query("SELECT usuario, seguidores, siguiendo, tweets, fecha from cuentas 
 									  where usuario = 'JIPSColima' and fecha BETWEEN '$fecha_inicio' AND '$fecha_fin'
 									  ORDER BY fecha ASC");
@@ -386,9 +371,6 @@
 									  ORDER BY fecha ASC");
 			$MiSelfiecoNacho = $this->db->query("SELECT usuario, seguidores, siguiendo, tweets, fecha from cuentas 
 									  where usuario = 'MiSelfiecoNacho' and fecha BETWEEN '$fecha_inicio' AND '$fecha_fin'
-									  ORDER BY fecha ASC");
-			$RomeroCoello = $this->db->query("SELECT usuario, seguidores, siguiendo, tweets, fecha from cuentas 
-									  where usuario = 'RomeroCoello' and fecha BETWEEN '$fecha_inicio' AND '$fecha_fin'
 									  ORDER BY fecha ASC");
 			$PANDColima = $this->db->query("SELECT usuario, seguidores, siguiendo, tweets, fecha from cuentas 
 									  where usuario = 'JovenesPanCLQ' and fecha BETWEEN '$fecha_inicio' AND '$fecha_fin'
@@ -408,16 +390,8 @@
 			$PT_Colima = $this->db->query("SELECT usuario, seguidores, siguiendo, tweets, fecha from cuentas 
 									  where usuario = 'PT_Colima' and fecha BETWEEN '$fecha_inicio' AND '$fecha_fin'
 									  ORDER BY fecha ASC");
-			$angelguardianmx = $this->db->query("SELECT usuario, seguidores, siguiendo, tweets, fecha from cuentas 
-									  where usuario = 'angelguardianmx' and fecha BETWEEN '$fecha_inicio' AND '$fecha_fin'
-									  ORDER BY fecha ASC");		
-			$AFmedios = $this->db->query("SELECT usuario, seguidores, siguiendo, tweets, fecha from cuentas 
-									  where usuario = 'AFmedios' and fecha BETWEEN '$fecha_inicio' AND '$fecha_fin'
-									  ORDER BY fecha ASC");	
-
 			$a = array(
                 "pri" => $pri->result(),
-                "SoyNachista" => $SoyNachista->result(),
                 "JIPSColima" => $JIPSColima->result(),
                 "jipsvdea" => $jipsvdea->result(),
                 "MiSelfiecoNacho" => $MiSelfiecoNacho->result(),
@@ -426,10 +400,7 @@
                 "PRDcolima" => $PRDcolima->result(),
                 "MovCiudadanoCol" => $MovCiudadanoCol->result(),
                 "ColPartidoVerde" => $ColPartidoVerde->result(),
-                "PT_Colima" => $PT_Colima->result(),
-                "angelguardianmx" => $angelguardianmx->result(),
-                "AFmedios" => $AFmedios->result(),
-                "RomeroCoello" => $RomeroCoello->result()
+                "PT_Colima" => $PT_Colima->result()
             );
             return $a;
 		}
@@ -450,7 +421,7 @@
 			{
 				return FALSE;
 			}
-		}
+		}		
 
 		public function obtener_cuenta_comoVamos_rango($fecha_inicio,$fecha_fin)
 		{
@@ -459,6 +430,122 @@
 									  ORDER BY fecha ASC");
 			$a = array(
                 "comoVamos" => $comoVamos->result()
+            );
+            return $a;
+		}
+
+		public function obtener_cuenta_afmedios()
+		{
+			$afmedios = $this->db->query("SELECT usuario, seguidores, siguiendo, tweets, fecha from cuentas 
+									  where fecha >= '2015-12-01' and usuario = 'AFmedios' ORDER BY fecha ASC");			
+
+			if($afmedios->num_rows()>0)
+			{
+				$a = array(
+	                "afmedios" => $afmedios->result()
+	            );
+	            return $a;
+			}
+			else
+			{
+				return FALSE;
+			}
+		}
+
+		public function obtener_cuenta_afmedios_rango($fecha_inicio,$fecha_fin)
+		{
+			$afmedios = $this->db->query("SELECT usuario, seguidores, siguiendo, tweets, fecha from cuentas 
+									  where usuario = 'AFmedios' and fecha BETWEEN '$fecha_inicio' AND '$fecha_fin' 
+									  ORDER BY fecha ASC");
+			$a = array(
+                "afmedios" => $afmedios->result()
+            );
+            return $a;
+		}
+
+		public function obtener_cuenta_angel()
+		{
+			$angel = $this->db->query("SELECT usuario, seguidores, siguiendo, tweets, fecha from cuentas 
+									  where fecha >= '2015-12-01' and usuario = 'angelguardianmx' ORDER BY fecha ASC");			
+
+			if($angel->num_rows()>0)
+			{
+				$a = array(
+	                "angel" => $angel->result()
+	            );
+	            return $a;
+			}
+			else
+			{
+				return FALSE;
+			}
+		}
+
+		public function obtener_cuenta_angel_rango($fecha_inicio,$fecha_fin)
+		{
+			$angel = $this->db->query("SELECT usuario, seguidores, siguiendo, tweets, fecha from cuentas 
+									  where usuario = 'angelguardianmx' and fecha BETWEEN '$fecha_inicio' AND '$fecha_fin' 
+									  ORDER BY fecha ASC");
+			$a = array(
+                "angel" => $angel->result()
+            );
+            return $a;
+		}
+
+		public function obtener_cuenta_jmcoello()
+		{
+			$jmcoello = $this->db->query("SELECT usuario, seguidores, siguiendo, tweets, fecha from cuentas 
+									  where fecha >= '2015-12-01' and usuario = 'RomeroCoello' ORDER BY fecha ASC");			
+
+			if($jmcoello->num_rows()>0)
+			{
+				$a = array(
+	                "jmcoello" => $jmcoello->result()
+	            );
+	            return $a;
+			}
+			else
+			{
+				return FALSE;
+			}
+		}
+
+		public function obtener_cuenta_jmcoello_rango($fecha_inicio,$fecha_fin)
+		{
+			$jmcoello = $this->db->query("SELECT usuario, seguidores, siguiendo, tweets, fecha from cuentas 
+									  where usuario = 'RomeroCoello' and fecha BETWEEN '$fecha_inicio' AND '$fecha_fin' 
+									  ORDER BY fecha ASC");
+			$a = array(
+                "jmcoello" => $jmcoello->result()
+            );
+            return $a;
+		}
+
+		public function obtener_cuenta_soyNachista()
+		{
+			$soyNachista = $this->db->query("SELECT usuario, seguidores, siguiendo, tweets, fecha from cuentas 
+									  where fecha >= '2015-12-01' and usuario = 'SoyNachista' ORDER BY fecha ASC");			
+
+			if($soyNachista->num_rows()>0)
+			{
+				$a = array(
+	                "soyNachista" => $soyNachista->result()
+	            );
+	            return $a;
+			}
+			else
+			{
+				return FALSE;
+			}
+		}
+
+		public function obtener_cuenta_soyNachista_rango($fecha_inicio,$fecha_fin)
+		{
+			$soyNachista = $this->db->query("SELECT usuario, seguidores, siguiendo, tweets, fecha from cuentas 
+									  where usuario = 'SoyNachista' and fecha BETWEEN '$fecha_inicio' AND '$fecha_fin' 
+									  ORDER BY fecha ASC");
+			$a = array(
+                "soyNachista" => $soyNachista->result()
             );
             return $a;
 		}

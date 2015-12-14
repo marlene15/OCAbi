@@ -11,7 +11,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 <!--[if !IE]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 <!-- BEGIN HEAD -->
 <head>
-  <title>Como vamos Colima</title> 
+  <title>AFmedios</title> 
   <?php $this->load->view('comunes/header'); ?>
   <script src="<?php echo base_url()?>assets/twitter/jsapi.js"></script> 
   <script src="<?php echo base_url()?>assets/twitter/tabsDL.js"></script>
@@ -32,7 +32,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
                 <div class="row-fluid">
                     <div class="span12" id="encabezado">
                         <h3 class="page-title" id="titulo">
-                            Como vamos Colima <small>Actividad en Twitter </small>
+                            AFmedios <small>Actividad en Twitter </small>
                         </h3>
                         <ul class="breadcrumb" id="ul_menu">
                             <li>
@@ -42,7 +42,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
                             </li>
                             <li>
                                 <i class="icon-home"></i>
-                                <a href="<?php echo site_url('twitter/controlador_inicio/comoVamos'); ?>">Como Vamos Colima</a> 
+                                <a href="<?php echo site_url('twitter/controlador_inicio/afmedios'); ?>">AFmedios</a> 
                             </li>                           
                         </ul>    
                     </div>
@@ -65,7 +65,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
                                             <div data-fullscreen="false" data-title=".widget .widget-primary" data-icon="icon-facebook" class="widget widget-primary" id="graf">
                                                 <div class="widget-header" style="background: #B20034">
                                                     <i class="icon-bar-chart"></i>
-                                                    <h3>ComoVamosColima</h3>                                                    
+                                                    <h3>AFmedios</h3>                                                    
                                                 </div>
                                                 <div class="widget-content">                                          
                                                     <center>
@@ -140,14 +140,14 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
     ////////comoVamos
     <?php //char2 TWITTER
         $a = array();
-        foreach ($comoVamos as $comoVamos) 
+        foreach ($afmedios as $afmedios) 
         {
             $a[] = array(
-                "fecha" => $comoVamos->fecha,
-                "seguidores" => $comoVamos->seguidores,
-                "siguiendo" => $comoVamos->siguiendo,
-                "tweets" => $comoVamos->tweets,
-                "promedio" => ($comoVamos->seguidores+$comoVamos->siguiendo+$comoVamos->tweets)/3
+                "fecha" => $afmedios->fecha,
+                "seguidores" => $afmedios->seguidores,
+                "siguiendo" => $afmedios->siguiendo,
+                "tweets" => $afmedios->tweets,
+                "promedio" => ($afmedios->seguidores+$afmedios->siguiendo+$afmedios->tweets)/3
             );
         }                       
     ?> 
@@ -164,7 +164,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
         ]
       );  
       var options = {
-        title: '@Comovamoscolima',
+        title: '@AFmedios',
         hAxis: {title: "Fecha"},
         seriesType: "bars",
         series: {3: {type: "line"}}
@@ -210,7 +210,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
         $.ajax({                                            
           type:"post",
           data:parametros,
-          url: '<?php echo site_url('twitter/controlador_consultas/rango_comoVamos');?>',                                      
+          url: '<?php echo site_url('twitter/controlador_consultas/rango_afmedios');?>',                                      
           dataType: 'html',
           success: function (html) {
             $('#con').html(html);   

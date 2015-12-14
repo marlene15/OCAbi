@@ -585,7 +585,6 @@ class Controlador_consultas extends CI_Controller {
 			$cuentas = $this->modelo_consultas->obtener_cuenta_partidos_rango($fecha_inicio,$fecha_fin);	
 			$datos = array(
 							"pri" => $cuentas['pri'],
-							"SoyNachista" => $cuentas['SoyNachista'],
 							"JIPSColima" => $cuentas['JIPSColima'],
 							"jipsvdea" => $cuentas['jipsvdea'],
 							"MiSelfiecoNacho" => $cuentas['MiSelfiecoNacho'],
@@ -595,9 +594,6 @@ class Controlador_consultas extends CI_Controller {
 							"MovCiudadanoCol" => $cuentas['MovCiudadanoCol'],
 							"ColPartidoVerde" => $cuentas['ColPartidoVerde'],
 							"PT_Colima" => $cuentas['PT_Colima'],
-							"angelguardianmx" => $cuentas['angelguardianmx'],
-							"AFmedios" => $cuentas['AFmedios'],
-							"RomeroCoello" => $cuentas['RomeroCoello'],
 							"fecha_inicio" => $fecha_inicio,
 		                	"fecha_fin" => $fecha_fin,
 		                	"vtab" => $vtab,
@@ -655,6 +651,206 @@ class Controlador_consultas extends CI_Controller {
 		                	"existe" => $existe
 		            	  );
 			$this->load->view('twitter/chars/char_comoVamos',$datos);
+		}
+	}
+
+	public function rango_afmedios()
+	{
+		$this->load->library('fechas');
+		$fecha_inicio = $this->input->post('fecha_inicioT');		
+		$fecha_inicio=$this->fechas->fecha_dd_mes_aaaa($fecha_inicio);		
+		$ExisteFechaInicio = $this->modelo_consultas->ExisteFecha($fecha_inicio);
+
+		$fecha_fin = $this->input->post('fecha_finT');
+		$fecha_fin=$this->fechas->fecha_dd_mes_aaaa($fecha_fin);
+		$ExisteFechaFin = $this->modelo_consultas->ExisteFecha($fecha_fin);
+		$ultima_fecha = $this->modelo_inicio->obtener_ultima_fecha();
+		$ultima_fecha = $this->fechas->fecha_dd_mes_aaaa_edita($ultima_fecha->ultima_fecha);
+		$vtab = $this->input->post('vtab1');
+
+		$fechaInicioMayor = 0;
+		$existe = 1;
+		if ($fecha_inicio>$fecha_fin) {
+			$fechaInicioMayor = 1;
+			$datos = array(
+							"fechaInicioMayor" => $fechaInicioMayor,
+							"ultima_fecha" => $ultima_fecha,
+							"vtab" => $vtab,
+							"existe" => $existe
+		            	  );
+			$this->load->view('twitter/chars/char_partidosError',$datos);
+		}
+		if ($ExisteFechaInicio==2 or $ExisteFechaFin==2) {
+			$existe = 0;
+			$datos = array(
+							"existe" => $existe,
+							"ultima_fecha" => $ultima_fecha,
+							"vtab" => $vtab,
+							"fechaInicioMayor" => $fechaInicioMayor
+		            	  );
+			$this->load->view('twitter/chars/char_partidosError',$datos);
+		}
+		if ($fechaInicioMayor!=1 and $existe!=0){	
+			$cuentas = $this->modelo_consultas->obtener_cuenta_afmedios_rango($fecha_inicio,$fecha_fin);	
+			$datos = array(
+							"afmedios" => $cuentas['afmedios'],
+							"fecha_inicio" => $fecha_inicio,
+		                	"fecha_fin" => $fecha_fin,
+		                	"vtab" => $vtab,
+		                	"fechaInicioMayor" => $fechaInicioMayor,
+		                	"existe" => $existe
+		            	  );
+			$this->load->view('twitter/chars/char_afmedios',$datos);
+		}
+	}
+
+	public function rango_angel()
+	{
+		$this->load->library('fechas');
+		$fecha_inicio = $this->input->post('fecha_inicioT');		
+		$fecha_inicio=$this->fechas->fecha_dd_mes_aaaa($fecha_inicio);		
+		$ExisteFechaInicio = $this->modelo_consultas->ExisteFecha($fecha_inicio);
+
+		$fecha_fin = $this->input->post('fecha_finT');
+		$fecha_fin=$this->fechas->fecha_dd_mes_aaaa($fecha_fin);
+		$ExisteFechaFin = $this->modelo_consultas->ExisteFecha($fecha_fin);
+		$ultima_fecha = $this->modelo_inicio->obtener_ultima_fecha();
+		$ultima_fecha = $this->fechas->fecha_dd_mes_aaaa_edita($ultima_fecha->ultima_fecha);
+		$vtab = $this->input->post('vtab1');
+
+		$fechaInicioMayor = 0;
+		$existe = 1;
+		if ($fecha_inicio>$fecha_fin) {
+			$fechaInicioMayor = 1;
+			$datos = array(
+							"fechaInicioMayor" => $fechaInicioMayor,
+							"ultima_fecha" => $ultima_fecha,
+							"vtab" => $vtab,
+							"existe" => $existe
+		            	  );
+			$this->load->view('twitter/chars/char_partidosError',$datos);
+		}
+		if ($ExisteFechaInicio==2 or $ExisteFechaFin==2) {
+			$existe = 0;
+			$datos = array(
+							"existe" => $existe,
+							"ultima_fecha" => $ultima_fecha,
+							"vtab" => $vtab,
+							"fechaInicioMayor" => $fechaInicioMayor
+		            	  );
+			$this->load->view('twitter/chars/char_partidosError',$datos);
+		}
+		if ($fechaInicioMayor!=1 and $existe!=0){	
+			$cuentas = $this->modelo_consultas->obtener_cuenta_angel_rango($fecha_inicio,$fecha_fin);	
+			$datos = array(
+							"angel" => $cuentas['angel'],
+							"fecha_inicio" => $fecha_inicio,
+		                	"fecha_fin" => $fecha_fin,
+		                	"vtab" => $vtab,
+		                	"fechaInicioMayor" => $fechaInicioMayor,
+		                	"existe" => $existe
+		            	  );
+			$this->load->view('twitter/chars/char_angel',$datos);
+		}
+	}
+
+	public function rango_jmcoello()
+	{
+		$this->load->library('fechas');
+		$fecha_inicio = $this->input->post('fecha_inicioT');		
+		$fecha_inicio=$this->fechas->fecha_dd_mes_aaaa($fecha_inicio);		
+		$ExisteFechaInicio = $this->modelo_consultas->ExisteFecha($fecha_inicio);
+
+		$fecha_fin = $this->input->post('fecha_finT');
+		$fecha_fin=$this->fechas->fecha_dd_mes_aaaa($fecha_fin);
+		$ExisteFechaFin = $this->modelo_consultas->ExisteFecha($fecha_fin);
+		$ultima_fecha = $this->modelo_inicio->obtener_ultima_fecha();
+		$ultima_fecha = $this->fechas->fecha_dd_mes_aaaa_edita($ultima_fecha->ultima_fecha);
+		$vtab = $this->input->post('vtab1');
+
+		$fechaInicioMayor = 0;
+		$existe = 1;
+		if ($fecha_inicio>$fecha_fin) {
+			$fechaInicioMayor = 1;
+			$datos = array(
+							"fechaInicioMayor" => $fechaInicioMayor,
+							"ultima_fecha" => $ultima_fecha,
+							"vtab" => $vtab,
+							"existe" => $existe
+		            	  );
+			$this->load->view('twitter/chars/char_partidosError',$datos);
+		}
+		if ($ExisteFechaInicio==2 or $ExisteFechaFin==2) {
+			$existe = 0;
+			$datos = array(
+							"existe" => $existe,
+							"ultima_fecha" => $ultima_fecha,
+							"vtab" => $vtab,
+							"fechaInicioMayor" => $fechaInicioMayor
+		            	  );
+			$this->load->view('twitter/chars/char_partidosError',$datos);
+		}
+		if ($fechaInicioMayor!=1 and $existe!=0){	
+			$cuentas = $this->modelo_consultas->obtener_cuenta_jmcoello_rango($fecha_inicio,$fecha_fin);	
+			$datos = array(
+							"jmcoello" => $cuentas['jmcoello'],
+							"fecha_inicio" => $fecha_inicio,
+		                	"fecha_fin" => $fecha_fin,
+		                	"vtab" => $vtab,
+		                	"fechaInicioMayor" => $fechaInicioMayor,
+		                	"existe" => $existe
+		            	  );
+			$this->load->view('twitter/chars/char_jmcoello',$datos);
+		}
+	}
+
+	public function rango_soyNachista()
+	{
+		$this->load->library('fechas');
+		$fecha_inicio = $this->input->post('fecha_inicioT');		
+		$fecha_inicio=$this->fechas->fecha_dd_mes_aaaa($fecha_inicio);		
+		$ExisteFechaInicio = $this->modelo_consultas->ExisteFecha($fecha_inicio);
+
+		$fecha_fin = $this->input->post('fecha_finT');
+		$fecha_fin=$this->fechas->fecha_dd_mes_aaaa($fecha_fin);
+		$ExisteFechaFin = $this->modelo_consultas->ExisteFecha($fecha_fin);
+		$ultima_fecha = $this->modelo_inicio->obtener_ultima_fecha();
+		$ultima_fecha = $this->fechas->fecha_dd_mes_aaaa_edita($ultima_fecha->ultima_fecha);
+		$vtab = $this->input->post('vtab1');
+
+		$fechaInicioMayor = 0;
+		$existe = 1;
+		if ($fecha_inicio>$fecha_fin) {
+			$fechaInicioMayor = 1;
+			$datos = array(
+							"fechaInicioMayor" => $fechaInicioMayor,
+							"ultima_fecha" => $ultima_fecha,
+							"vtab" => $vtab,
+							"existe" => $existe
+		            	  );
+			$this->load->view('twitter/chars/char_partidosError',$datos);
+		}
+		if ($ExisteFechaInicio==2 or $ExisteFechaFin==2) {
+			$existe = 0;
+			$datos = array(
+							"existe" => $existe,
+							"ultima_fecha" => $ultima_fecha,
+							"vtab" => $vtab,
+							"fechaInicioMayor" => $fechaInicioMayor
+		            	  );
+			$this->load->view('twitter/chars/char_partidosError',$datos);
+		}
+		if ($fechaInicioMayor!=1 and $existe!=0){	
+			$cuentas = $this->modelo_consultas->obtener_cuenta_soyNachista_rango($fecha_inicio,$fecha_fin);	
+			$datos = array(
+							"soyNachista" => $cuentas['soyNachista'],
+							"fecha_inicio" => $fecha_inicio,
+		                	"fecha_fin" => $fecha_fin,
+		                	"vtab" => $vtab,
+		                	"fechaInicioMayor" => $fechaInicioMayor,
+		                	"existe" => $existe
+		            	  );
+			$this->load->view('twitter/chars/char_soyNachista',$datos);
 		}
 	}
 
