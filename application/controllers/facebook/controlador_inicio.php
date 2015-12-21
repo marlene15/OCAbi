@@ -91,17 +91,74 @@ class Controlador_inicio extends CI_Controller {
 					  'nachoP' => $nacho['positivos'],
 					  'nachoNe' => $nacho['negativos'],
 					  'nachoN' => $nacho['neutros'],
+					  'totalN' => $nacho['total'],
+					  
 					  'jorgeP' => $jorge['positivos'],
 					  'jorgeNe' => $jorge['negativos'],
 					  'jorgeN' => $jorge['neutros'],
+					  'totalJ' => $jorge['total'],
+					  
 					  'marthaP' => $martha['positivos'],
 					  'marthaNE' => $martha['negativos'],
 					  'marthaN' => $martha['neutros'],
+					  'totalM' => $martha['total'],
+
 					  'lochoP' => $locho['positivos'],
 					  'lochoNe' => $locho['negativos'],
 					  'lochoN' => $locho['neutros'],
+					  'totalL' => $locho['total']
 					  
 					  );
 		$this->load->view('facebook/valoracionGobernadores',$datos);
+	}
+
+		//Como vamos Colima general
+	public function comoVamos()
+	{
+		$resultado = $this->modelo_consultas->obtener_cuenta_comoVamos();	
+		$datos = array(
+						"comoVamos" => $resultado['comoVamos']
+	            	  );
+		$this->load->view('facebook/comoVamos',$datos);
+	}
+
+	//Afmedios
+	public function afmedios()
+	{
+		$resultado = $this->modelo_consultas->obtener_cuenta_afmedios();	
+		$datos = array(
+						"afmedios" => $resultado['afmedios']
+	            	  );
+		$this->load->view('facebook/afmedios',$datos);
+	}
+
+	//Angel Guardian
+	public function angel()
+	{
+		$resultado = $this->modelo_consultas->obtener_cuenta_angel();	
+		$datos = array(
+						"angel" => $resultado['angel']
+	            	  );
+		$this->load->view('facebook/angel',$datos);
+	}
+
+	//José Manuel Coello
+	public function jmcoello()
+	{
+		$resultado = $this->modelo_consultas->obtener_cuenta_jmcoello();	
+		$datos = array(
+						"jmcoello" => $resultado['jmcoello']
+	            	  );
+		$this->load->view('facebook/jmcoello',$datos);
+	}
+
+	//soyNachista
+	public function soyNachista()
+	{
+		$resultado = $this->modelo_consultas->obtener_cuenta_soyNachista();	
+		$datos = array(
+						"soyNachista" => $resultado['soyNachista']
+	            	  );
+		$this->load->view('facebook/soyNachista',$datos);
 	}
 }

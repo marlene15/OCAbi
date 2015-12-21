@@ -89,57 +89,10 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
                                                         <div class="container-fluid">
                                                             <div class="row-fluid">
                                                                 <div class="span12">
-                                                                    <h3>Total: 844<!--<?php echo $totalN; ?>--> comentarios</h3>
+                                                                    <h3>Total: <?php echo $totalJ; ?> comentarios</h3>
                                                                 </div>
                                                             </div>
                                                         </div>                                      
-                                                        <div class="container-fluid">
-                                                            <div class="row-fluid">
-                                                                <div class="span4">
-                                                                    <center>
-                                                                        <svg id="fillgauge1" width="250" height="200" preserveAspectRatio="xMidYMid" viewBox="-22 -41 300 300"></svg>
-                                                                        <div><strong>Comentarios Positivos</strong></div>
-                                                                    </center>
-                                                                </div>
-                                                                <div class="span4">
-                                                                    <center>
-                                                                        <svg id="fillgauge2" width="250" height="200" preserveAspectRatio="xMidYMid" viewBox="-22 -41 300 300"></svg>
-                                                                        <div><strong>Comentarios Negativos</strong></div>
-                                                                    </center>
-                                                                </div>
-                                                                <div class="span4">
-                                                                    <center>
-                                                                        <svg id="fillgauge3" width="250" height="200" preserveAspectRatio="xMidYMid" viewBox="-22 -41 300 300"></svg>
-                                                                        <div><strong>Comentarios Neutros</strong></div>
-                                                                    </center>
-                                                                </div>
-                                                            </div>
-                                                            <br/>
-                                                        </div>   
-                                                    </div>
-                                                </div> 
-                                            </div> 
-                                        </div>
-                                    </div>                                                               
-                                </div>
-
-                                <div id="nacho" class="tab-pane active in">
-                                    <div class="container-fluid">
-                                        <div class="row-fluid">
-                                            <div class="span12">                                          
-                                                <div data-fullscreen="false" data-title=".widget .widget-primary" data-icon="icon-facebook" class="widget widget-primary" id="graf">
-                                                    <div class="widget-header" style="background: #B20034">
-                                                        <i class="icon-comments-alt"></i>
-                                                        <h3>Valoración de Comentarios</h3>                                                    
-                                                    </div>
-                                                    <div class="widget-content">
-                                                        <div class="container-fluid">
-                                                            <div class="row-fluid">
-                                                                <div class="span12">
-                                                                    <h3>Total: 943<!--<?php echo $totalN; ?>--> comentarios</h3>
-                                                                </div>
-                                                            </div>
-                                                        </div>                                           
                                                         <div class="container-fluid">
                                                             <div class="row-fluid">
                                                                 <div class="span4">
@@ -167,6 +120,53 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
                                                 </div> 
                                             </div> 
                                         </div>
+                                    </div>                                                               
+                                </div>
+
+                                <div id="nacho" class="tab-pane active in">
+                                    <div class="container-fluid">
+                                        <div class="row-fluid">
+                                            <div class="span12">                                          
+                                                <div data-fullscreen="false" data-title=".widget .widget-primary" data-icon="icon-facebook" class="widget widget-primary" id="graf">
+                                                    <div class="widget-header" style="background: #B20034">
+                                                        <i class="icon-comments-alt"></i>
+                                                        <h3>Valoración de Comentarios</h3>                                                    
+                                                    </div>
+                                                    <div class="widget-content">
+                                                        <div class="container-fluid">
+                                                            <div class="row-fluid">
+                                                                <div class="span12">
+                                                                    <h3>Total: <?php echo $totalN; ?> comentarios</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div>                                           
+                                                        <div class="container-fluid">
+                                                            <div class="row-fluid">
+                                                                <div class="span4">
+                                                                    <center>
+                                                                        <svg id="fillgauge1" width="250" height="200" preserveAspectRatio="xMidYMid" viewBox="-22 -41 300 300"></svg>
+                                                                        <div><strong>Comentarios Positivos</strong></div>
+                                                                    </center>
+                                                                </div>
+                                                                <div class="span4">
+                                                                    <center>
+                                                                        <svg id="fillgauge2" width="250" height="200" preserveAspectRatio="xMidYMid" viewBox="-22 -41 300 300"></svg>
+                                                                        <div><strong>Comentarios Negativos</strong></div>
+                                                                    </center>
+                                                                </div>
+                                                                <div class="span4">
+                                                                    <center>
+                                                                        <svg id="fillgauge3" width="250" height="200" preserveAspectRatio="xMidYMid" viewBox="-22 -41 300 300"></svg>
+                                                                        <div><strong>Comentarios Neutros</strong></div>
+                                                                    </center>
+                                                                </div>
+                                                            </div>
+                                                            <br/>
+                                                        </div>   
+                                                    </div>
+                                                </div> 
+                                            </div> 
+                                        </div>
                                     </div>
                                 </div>
 
@@ -183,7 +183,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
                                                         <div class="container-fluid">
                                                             <div class="row-fluid">
                                                                 <div class="span12">
-                                                                    <h3>Total: 211<!--<?php echo $totalN; ?>--> comentarios</h3>
+                                                                    <h3><?php echo $totalM; ?> comentarios</h3>
                                                                 </div>
                                                             </div>
                                                         </div>                                           
@@ -230,7 +230,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
                                                         <div class="container-fluid">
                                                             <div class="row-fluid">
                                                                 <div class="span12">
-                                                                    <h3>Total: 769<!--<?php echo $totalN; ?>--> comentarios</h3>
+                                                                    <h3><?php echo $totalL; ?> comentarios</h3>
                                                                 </div>
                                                             </div>
                                                         </div>                                          
