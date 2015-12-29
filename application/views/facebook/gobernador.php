@@ -185,7 +185,7 @@
       data.addColumn('number', 'Likes');
       data.addColumn('number', 'Posts');       
       data.addRows([
-        ['Coalición \n PRI-PVE-PNA',<?php echo $megustaci ?>, <?php echo $seguidoresci ?>],
+        ['Coalición \n PRI-PVE-PNA-PT',<?php echo $megustaci ?>, <?php echo $seguidoresci ?>],
         ['PAN',<?php echo $megustacj ?>, <?php echo $seguidorescj ?>],
         ['PRD',<?php echo $megustacm ?>, <?php echo $seguidorescm ?>],
         ['MC',<?php echo $megustacl ?>, <?php echo $seguidorescl ?>]     

@@ -142,16 +142,6 @@ class Controlador_inicio extends CI_Controller {
 		$this->load->view('facebook/angel',$datos);
 	}
 
-	//José Manuel Coello
-	public function jmcoello()
-	{
-		$resultado = $this->modelo_consultas->obtener_cuenta_jmcoello();	
-		$datos = array(
-						"jmcoello" => $resultado['jmcoello']
-	            	  );
-		$this->load->view('facebook/jmcoello',$datos);
-	}
-
 	//soyNachista
 	public function soyNachista()
 	{

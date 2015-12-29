@@ -32,7 +32,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
                 <div class="row-fluid">
                     <div class="span12" id="encabezado">
                         <h3 class="page-title" id="titulo">
-                            AFmedios <small>Actividad en Facebook </small>
+                            Ángel Guardián <small>Actividad en Facebook </small>
                         </h3>
                         <ul class="breadcrumb" id="ul_menu">
                             <li>
@@ -42,7 +42,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
                             </li>
                             <li>
                                 <i class="icon-home"></i>
-                                <a href="<?php echo site_url('facebook/controlador_inicio/afmedios'); ?>">AFmedios</a> 
+                                <a href="<?php echo site_url('facebook/controlador_inicio/afmedios'); ?>">angelguardianmx</a> 
                             </li>                           
                         </ul>    
                     </div>
@@ -65,7 +65,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
                                             <div data-fullscreen="false" data-title=".widget .widget-primary" data-icon="icon-facebook" class="widget widget-primary" id="graf">
                                                 <div class="widget-header" style="background: #B20034">
                                                     <i class="icon-bar-chart"></i>
-                                                    <h3>AFmedios</h3>                                                    
+                                                    <h3>Ángel Guardián</h3>                                                    
                                                 </div>
                                                 <div class="widget-content">                                          
                                                     <center>
@@ -140,12 +140,12 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
     ////////comoVamos
     <?php //char2 facebool
         $a = array();
-        foreach ($afmedios as $afmedios) 
+        foreach ($angel as $angel) 
         {
             $a[] = array(
-                "Fecha" => $afmedios->fecha,
-                "Megusta" => $afmedios->Megusta,
-                "PersonasHablan" => $afmedios->PersonasHablan
+                "Fecha" => $angel->fecha,
+                "Megusta" => $angel->Megusta,
+                "PersonasHablan" => $angel->PersonasHablan
             );
         }                       
     ?> 
@@ -163,7 +163,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
         ]
       );  
       var options = {
-        title: 'AFmedios',
+        title: 'angelguardianmx',
         hAxis: {title: "Fecha"},
         seriesType: "bars",
         series: {3: {type: "line"}}
@@ -210,7 +210,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
         $.ajax({                                            
           type:"post",
           data:parametros,
-          url: '<?php echo site_url('facebook/controlador_consultas/rango_afmedios');?>',                                      
+          url: '<?php echo site_url('facebook/controlador_consultas/rango_angel');?>',                                      
           dataType: 'html',
           success: function (html) {
             $('#con').html(html);   
