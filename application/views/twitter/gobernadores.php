@@ -122,7 +122,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 													  </tr>	
 													  <tr>
 													    <td class="active"><center><img src="<?php echo base_url()?>assets/logos_partidos/PRD.jpg" class="img-responsive center-block" width="30" height="30"></center></td>
-													    <td class="success"><center>Martha Zepeda <?php echo $seguidoresm ?></center></td>
+													    <td class="success"><center>Martha Zepeda</center></td>
 													  </tr>	
 													  <tr>
 													    <td class="active"><center><img src="<?php echo base_url()?>assets/logos_partidos/PMC.png" class="img-responsive center-block" width="30" height="30"></center></td>

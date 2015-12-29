@@ -151,20 +151,7 @@
         $('#alert').hide(); 
         google.load("visualization", "1", {packages: ["corechart"]});    
         google.setOnLoadCallback(drawChart);
-        ////////PAN
-        <?php //char6  
-            $a6 = array();
-            foreach ($PANDColima as $PANDColima) 
-            {
-                $a6[] = array(
-                    "fecha" => $PANDColima->fecha,
-                    "seguidores" => $PANDColima->seguidores,
-                    "siguiendo" => $PANDColima->siguiendo,
-                    "tweets" => $PANDColima->tweets,
-                    "promedio" => ($PANDColima->seguidores+$PANDColima->siguiendo+$PANDColima->tweets)/3
-                );
-            }                       
-        ?>
+       
         <?php //char8 
             $a8 = array();
             foreach ($cdepancolima as $cdepancolima) 
@@ -179,24 +166,7 @@
             }                       
         ?>
         ////////////////////////////////////////PAN
-        function drawChart2() {
-          var data6 = google.visualization.arrayToDataTable(
-            [
-              ['Fecha', 'Seguidores', 'Siguiendo', 'Tweets', 'Promedio'],
-              <?php for ($i=0; $i<count($a6); $i++) {
-                  ?>
-                  ['<?php echo $a6[$i]['fecha'] ?>', <?php echo $a6[$i]['seguidores'] ?>, <?php echo $a6[$i]['siguiendo'] ?>, <?php echo $a6[$i]['tweets'] ?>, <?php echo $a6[$i]['promedio'] ?>],
-              <?php } ?>
-            ]
-          );  
-          var options6 = {
-            title: '@JovenesPanCLQ',
-            hAxis: {title: "Fecha"},
-            seriesType: "bars",
-            series: {3: {type: "line"}}
-          };
-          var chart6 = new google.visualization.ComboChart(document.getElementById('chart_div6'));
-          chart6.draw(data6, options6);    
+        function drawChart2() {   
 
           //////////////char8
           var data8 = google.visualization.arrayToDataTable(
@@ -218,8 +188,7 @@
           chart8.draw(data8, options8);    
         }
       }
-      drawChart2();
-      $('#chart_div6').width('100%');  
+      drawChart2();  
       $('#chart_div8').width('100%'); 
     }; 
 
