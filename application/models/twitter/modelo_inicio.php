@@ -659,19 +659,19 @@
 										  (texto LIKE '%nachoperaltacol%' or texto LIKE '%jips%' 
 										  or texto LIKE '%JoveNachos%' or texto LIKE '%JuntosNadieNosPara%'
 										  or texto LIKE '%JTConNacho%' or texto LIKE '%JuntosHacemosMás%'
-										  or texto LIKE '%JuntosLoEstamosLogrando%' or texto LIKE '%LoEstamosLogrando%')"
+										  or texto LIKE '%JuntosLoEstamosLogrando%' or texto LIKE '%LoEstamosLogrando%' or texto LIKE '%SoyNachista%')"
 										);
 			$negativos = $this->db->query("SELECT count(*) as negativos FROM twitt WHERE valoracion = 2 and fecha >= '2015-12-01' and
 										  (texto LIKE '%nachoperaltacol%' or texto LIKE '%jips%' 
 										  or texto LIKE '%JoveNachos%' or texto LIKE '%JuntosNadieNosPara%'
 										  or texto LIKE '%JTConNacho%' or texto LIKE '%JuntosHacemosMás%'
-										  or texto LIKE '%JuntosLoEstamosLogrando%' or texto LIKE '%LoEstamosLogrando%')"
+										  or texto LIKE '%JuntosLoEstamosLogrando%' or texto LIKE '%LoEstamosLogrando%' or texto LIKE '%SoyNachista%')"
 										);
 			$neutros = $this->db->query("SELECT count(*) as neutros FROM twitt WHERE valoracion = 3 and fecha >= '2015-12-01' and
 										  (texto LIKE '%nachoperaltacol%' or texto LIKE '%jips%' 
 										  or texto LIKE '%JoveNachos%' or texto LIKE '%JuntosNadieNosPara%'
 										  or texto LIKE '%JTConNacho%' or texto LIKE '%JuntosHacemosMás%'
-										  or texto LIKE '%JuntosLoEstamosLogrando%' or texto LIKE '%LoEstamosLogrando%')"
+										  or texto LIKE '%JuntosLoEstamosLogrando%' or texto LIKE '%LoEstamosLogrando%' or texto LIKE '%SoyNachista%')"
 										);
 
 			$row_positivos = $positivos->row();
@@ -1732,6 +1732,7 @@
 										  or texto LIKE '%jips%' 
 										  or texto LIKE '%JuntosNadieNosPara%' 
 										  or texto LIKE '%JIPS2015%' 
+										  or texto LIKE '%SoyNachista%' 
 										  or texto LIKE '%MiSelfiecoNacho%'	
 										  or texto LIKE '%ConNachoSeguro%' 
 										  or texto LIKE '%NachoGobernador%' 
@@ -1797,6 +1798,7 @@
 										  or hashtags LIKE '%jips%' 
 										  or hashtags LIKE '%JuntosNadieNosPara%' 
 										  or hashtags LIKE '%JIPS2015%' 
+										  or hashtags LIKE '%SoyNachista%' 
 										  or hashtags LIKE '%MiSelfiecoNacho%'	
 										  or hashtags LIKE '%ConNachoSeguro%' 
 										  or hashtags LIKE '%NachoGobernador%' 
