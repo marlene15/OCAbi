@@ -150,6 +150,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 										      	<div class="btn-group-vertical">
 											        <a class="btn btn-success btn-lg active" id="consulta_nube"> Noviembre</a>
 											        <a class="btn btn-primary btn-lg" id="consulta_nube2"> Diciembre</a>
+											        <a class="btn btn-primary btn-lg" id="consulta_nube3"> Enero</a>
 										      	</div>
 										    </div>
 										</div> 										
@@ -359,7 +360,8 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
       $("#consulta_nube").click(function(event) {
       	$("#consulta_nube").addClass('active btn-success');
-      	$("#consulta_nube2").removeClass('active btn-success'); 	
+      	$("#consulta_nube2").removeClass('active btn-success'); 
+      	$("#consulta_nube3").removeClass('active btn-success');	
         var parametros = {
                 "mes" : '11'
         };
@@ -377,6 +379,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
       $("#consulta_nube2").click(function(event) {
       	$("#consulta_nube2").addClass('active btn-success');
       	$("#consulta_nube").removeClass('active btn-success');
+      	$("#consulta_nube3").removeClass('active btn-success');
       	$("#consulta_nube").addClass('btn-primary');        	
         var parametros = {
                 "mes" : '12'
@@ -390,7 +393,26 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
             $('#nube_consulta').html(html);   
           }
         });            
-      });      
+      }); 
+
+      $("#consulta_nube3").click(function(event) {
+      	$("#consulta_nube3").addClass('active btn-success');
+      	$("#consulta_nube").removeClass('active btn-success');
+      	$("#consulta_nube2").removeClass('active btn-success');
+      	$("#consulta_nube").addClass('btn-primary');        	
+        var parametros = {
+                "mes" : '01'
+        };
+        $.ajax({                                            
+          type:"post",
+          data:parametros,
+          url: '<?php echo site_url('twitter/controlador_consultas/nube_gobernadores');?>',                                      
+          dataType: 'html',
+          success: function (html) {
+            $('#nube_consulta').html(html);   
+          }
+        });            
+      });    
 
     });
   </script>
