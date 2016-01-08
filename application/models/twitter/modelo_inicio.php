@@ -1846,6 +1846,7 @@
 										  or hashtags LIKE '%nachoperalta%' 
 										  or hashtags LIKE '%NachoPropone%' 
 										  or hashtags LIKE '%JorgeLuis%' 
+										  or hashtags LIKE '%presiadoasesino%' 
 										  or hashtags LIKE '%AlegrateYaSeVan%' 
 										  or hashtags LIKE '%DesdeAbajoConTrabajo%' 
 										  or hashtags LIKE '%ClaroQuePodemos%' 
