@@ -40,7 +40,7 @@
 			$locho = $this->db->query("SELECT usuario, seguidores, siguiendo, tweets from cuentas 
 										where fecha = '$fecha'  and usuario = 'leonciomoranL8'");
 			$martha = $this->db->query("SELECT usuario, seguidores, siguiendo, tweets from cuentas 
-										where fecha = '$fecha'  and usuario = 'MarthaZepeda_'");
+										where fecha = '$fecha' and usuario = 'MarthaZepeda_'");
 		
 			if($nacho->num_rows()>0 and $jorge->num_rows()>0 and $locho->num_rows()>0 and $martha->num_rows()>0)
 			{

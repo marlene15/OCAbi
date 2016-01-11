@@ -789,7 +789,7 @@
 		public function valoracion_martha()
 		{
 			$positivos = $this->db->query("SELECT count(*) as positivos FROM twitt WHERE valoracion = 1 and fecha >= '2015-12-01' and
-										  (texto LIKE '%MarthaZepeda_%' or texto LIKE '%PRDcolima%' 
+										  (texto LIKE '%MarthaZepeda_%' or texto LIKE '%PRDcolima%' or texto LIKE '%MarthaZepeda1_%'										  
 										  or texto LIKE '%PRD%' or texto LIKE '%ComoTú%'
 										  or texto LIKE '%ComoTu%' or texto LIKE '%EsHoraDelPRD%'
 										  or texto LIKE '%SomosPRD%' or texto LIKE '%SabemosGobernar%'
@@ -798,7 +798,7 @@
 										  or texto LIKE '%YoPropongo%')" 
 										);
 			$negativos = $this->db->query("SELECT count(*) as negativos FROM twitt WHERE valoracion = 2 and fecha >= '2015-12-01' and
-										  (texto LIKE '%MarthaZepeda_%' or texto LIKE '%PRDcolima%' 
+										  (texto LIKE '%MarthaZepeda_%' or texto LIKE '%PRDcolima%' or texto LIKE '%MarthaZepeda1_%'
 										  or texto LIKE '%PRD%' or texto LIKE '%ComoTú%'
 										  or texto LIKE '%ComoTu%' or texto LIKE '%EsHoraDelPRD%'
 										  or texto LIKE '%SomosPRD%' or texto LIKE '%SabemosGobernar%'
@@ -807,7 +807,7 @@
 										  or texto LIKE '%YoPropongo%')" 
 										);
 			$neutros = $this->db->query("SELECT count(*) as neutros FROM twitt WHERE valoracion = 3 and fecha >= '2015-12-01' and
-										  (texto LIKE '%MarthaZepeda_%' or texto LIKE '%PRDcolima%' 
+										  (texto LIKE '%MarthaZepeda_%' or texto LIKE '%PRDcolima%' or texto LIKE '%MarthaZepeda1_%'
 										  or texto LIKE '%PRD%' or texto LIKE '%ComoTú%'
 										  or texto LIKE '%ComoTu%' or texto LIKE '%EsHoraDelPRD%'
 										  or texto LIKE '%SomosPRD%' or texto LIKE '%SabemosGobernar%'
@@ -1875,6 +1875,7 @@
 										  or hashtags LIKE '%LochoMorán%' 
 										  or hashtags LIKE '%PRDcolima%' 
 										  or hashtags LIKE '%PRD%' 
+										  or texto LIKE '%MarthaZepeda1_%'
 										  or hashtags LIKE '%ComoTú%' 
 										  or hashtags LIKE '%ComoTu%' 
 										  or hashtags LIKE '%EsHoraDelPRD%' 
