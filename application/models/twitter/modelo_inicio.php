@@ -664,7 +664,8 @@
 										  or texto LIKE '%JoveNachos%' or texto LIKE '%LoEstamosLogrando%' or texto LIKE '%SoyNachista%'
 										  or texto LIKE '%MiSelfiecoNacho%' or texto LIKE '%#Responsabilidad%' or texto LIKE '%QueTuGanes%'
 										  or texto LIKE '%nachoperalta%' or texto LIKE '%NachoPropone%' or texto LIKE '%NachoGobernador%'
-										  or texto LIKE '%NachoVotoSeguro%' or texto LIKE '%NachoGano%' or texto LIKE '%VotaPri%' or texto LIKE '%NachoColimaEstaContigo%')"
+										  or texto LIKE '%NachoVotoSeguro%' or texto LIKE '%NachoGano%' or texto LIKE '%VotaPri%' or texto LIKE '%NachoColimaEstaContigo%'
+										  or hashtags LIKE '%ElBuenoEsNacho%')"
 										);
 			$negativos = $this->db->query("SELECT count(*) as negativos FROM twitt WHERE valoracion = 2 and fecha >= '2015-12-01' and
 										  (texto LIKE '%nachoperaltacol%' or texto LIKE '%ConNachoSeguro%' 
@@ -675,7 +676,8 @@
 										  or texto LIKE '%JoveNachos%' or texto LIKE '%LoEstamosLogrando%' or texto LIKE '%SoyNachista%'
 										  or texto LIKE '%MiSelfiecoNacho%' or texto LIKE '%#Responsabilidad%' or texto LIKE '%QueTuGanes%'
 										  or texto LIKE '%nachoperalta%' or texto LIKE '%NachoPropone%' or texto LIKE '%NachoGobernador%'
-										  or texto LIKE '%NachoVotoSeguro%' or texto LIKE '%NachoGano%' or texto LIKE '%VotaPri%' or texto LIKE '%NachoColimaEstaContigo%')"
+										  or texto LIKE '%NachoVotoSeguro%' or texto LIKE '%NachoGano%' or texto LIKE '%VotaPri%' or texto LIKE '%NachoColimaEstaContigo%'
+										  or hashtags LIKE '%ElBuenoEsNacho%')"
 										);
 			$neutros = $this->db->query("SELECT count(*) as neutros FROM twitt WHERE valoracion = 3 and fecha >= '2015-12-01' and
 										  (texto LIKE '%nachoperaltacol%' or texto LIKE '%ConNachoSeguro%' 
@@ -686,7 +688,8 @@
 										  or texto LIKE '%JoveNachos%' or texto LIKE '%LoEstamosLogrando%' or texto LIKE '%SoyNachista%'
 										  or texto LIKE '%MiSelfiecoNacho%' or texto LIKE '%#Responsabilidad%' or texto LIKE '%QueTuGanes%'
 										  or texto LIKE '%nachoperalta%' or texto LIKE '%NachoPropone%' or texto LIKE '%NachoGobernador%'
-										  or texto LIKE '%NachoVotoSeguro%' or texto LIKE '%NachoGano%' or texto LIKE '%VotaPri%' or texto LIKE '%NachoColimaEstaContigo%')"
+										  or texto LIKE '%NachoVotoSeguro%' or texto LIKE '%NachoGano%' or texto LIKE '%VotaPri%' or texto LIKE '%NachoColimaEstaContigo%'
+										  or hashtags LIKE '%ElBuenoEsNacho%')"
 										);
 
 			$row_positivos = $positivos->row();
@@ -1827,6 +1830,7 @@
 		{	
 			$hashtags=$this->db->query("SELECT hashtags FROM `twitt` WHERE (hashtags LIKE '%nachoperaltacol%' 
 										  or hashtags LIKE '%jips%' 
+										  or hashtags LIKE '%ElBuenoEsNacho%' 
 										  or hashtags LIKE '%JuntosNadieNosPara%' 
 										  or hashtags LIKE '%JIPS2015%' 
 										  or hashtags LIKE '%SoyNachista%' 

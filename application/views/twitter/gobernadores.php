@@ -274,7 +274,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
       data.addColumn('number', 'Tweets');        
       data.addRows([
       	['PAN', <?php echo $seguidoresj ?>, <?php echo $siguiendoj ?>, <?php echo $tweetsj ?>],
-        ['Coalición \n PRI-PVEM-PNA', <?php echo $seguidoresn ?>, <?php echo $siguiendon ?>, <?php echo $tweetsn ?>],
+        ['Coalición \n PRI-PVEM-PNA-PT', <?php echo $seguidoresn ?>, <?php echo $siguiendon ?>, <?php echo $tweetsn ?>],
         ['PRD', <?php echo $seguidoresm ?>, <?php echo $siguiendom ?>, <?php echo $tweetsm ?>],
         ['MC', <?php echo $seguidoresl ?>, <?php echo $siguiendol ?>, <?php echo $tweetsl ?>]        
       ]);

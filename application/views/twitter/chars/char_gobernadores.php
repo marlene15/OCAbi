@@ -11,7 +11,7 @@ if (<?php echo $vtab ?>==1) {
         data.addColumn('number', 'Tweets');        
         data.addRows([
           ['PAN', <?php echo $seguidoresj ?>, <?php echo $siguiendoj ?>, <?php echo $tweetsj ?>],
-          ['PRI, PVE, PNA', <?php echo $seguidoresn ?>, <?php echo $siguiendon ?>, <?php echo $tweetsn ?>],
+          ['PRI-PVEM-PNA-PT', <?php echo $seguidoresn ?>, <?php echo $siguiendon ?>, <?php echo $tweetsn ?>],
           ['PRD', <?php echo $seguidoresm ?>, <?php echo $siguiendom ?>, <?php echo $tweetsm ?>],
           ['MC', <?php echo $seguidoresl ?>, <?php echo $siguiendol ?>, <?php echo $tweetsl ?>]        
         ]);
