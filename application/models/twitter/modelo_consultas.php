@@ -559,7 +559,7 @@
 			$locho = $this->db->query("SELECT fecha,count(*) as cantidad FROM twitt 
 									WHERE fecha >= '2015-12-01' and menciones LIKE '%leonciomoranL8%' group by fecha");
 			$martha = $this->db->query("SELECT fecha,count(*) as cantidad FROM twitt 
-									WHERE fecha >= '2015-12-01' and menciones LIKE '%MarthaZepeda_%' group by fecha");
+									WHERE fecha >= '2015-12-01' and (menciones LIKE '%MarthaZepeda_%' or menciones LIKE '%MarthaZepeda1_%') group by fecha");
 			$a = array(
 	            "nacho" => $nacho->result(),
 	            "jorge" => $jorge->result(),
