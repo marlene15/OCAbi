@@ -240,7 +240,6 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
                                                     </div>
                                                     <div class="widget-content">                                          
                                                         <center>
-                                                            <div>No hay tuits en Minatitlán</div>
                                                             <div id="map_div10" style="width: 100%; height: 500px;"></div> <!--Primer mapa-->  
                                                         </center> 
                                                     </div>
