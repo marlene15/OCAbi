@@ -714,7 +714,8 @@
 										  or texto LIKE '%ClaroQuePodemos%' or texto LIKE '%AlegrateYaSeVan%'
 										  or texto LIKE '%JorgeLuis %' or texto LIKE '%YaSeVan%' 
 										  or texto LIKE '%AlégrateDeQueSeVanSeVan%' or texto LIKE '%DeQueSeVanSeVan%'
-										  or texto LIKE '%YoSoy1DeLos7%')"  
+										  or texto LIKE '%YoSoy1DeLos7%' or texto LIKE '%NiPreciadoQuiereSerGober%' 
+										  or texto LIKE '%PreciadoAsesino%')"  
 										);
 
 			$negativos = $this->db->query("SELECT count(*) as negativos FROM twitt WHERE valoracion = 2 and fecha >= '2015-12-01' and
@@ -722,14 +723,16 @@
 										  or texto LIKE '%ClaroQuePodemos%' or texto LIKE '%AlegrateYaSeVan%'
 										  or texto LIKE '%JorgeLuis %' or texto LIKE '%YaSeVan%' 
 										  or texto LIKE '%AlégrateDeQueSeVanSeVan%' or texto LIKE '%DeQueSeVanSeVan%'
-										  or texto LIKE '%YoSoy1DeLos7%')"   
+										  or texto LIKE '%YoSoy1DeLos7%' or texto LIKE '%NiPreciadoQuiereSerGober%' 
+										  or texto LIKE '%PreciadoAsesino%')"   
 										);
 			$neutros = $this->db->query("SELECT count(*) as neutros FROM twitt WHERE valoracion = 3 and fecha >= '2015-12-01' and
 										  (texto LIKE '%JL_Preciado_%' or texto LIKE '%DesdeAbajoConTrabajo%' 
 										  or texto LIKE '%ClaroQuePodemos%' or texto LIKE '%AlegrateYaSeVan%'
 										  or texto LIKE '%JorgeLuis %' or texto LIKE '%YaSeVan%' 
 										  or texto LIKE '%AlégrateDeQueSeVanSeVan%' or texto LIKE '%DeQueSeVanSeVan%'
-										  or texto LIKE '%YoSoy1DeLos7%')"    
+										  or texto LIKE '%YoSoy1DeLos7%' or texto LIKE '%NiPreciadoQuiereSerGober%' 
+										  or texto LIKE '%PreciadoAsesino%')"    
 										);
 
 			$row_positivos = $positivos->row();
@@ -1784,7 +1787,10 @@
 										  or texto LIKE '%nacho%' 
 										  or texto LIKE '%pri%'	
 										  or texto LIKE '%NachoPropone%' 
-										  or texto LIKE '%JorgeLuis%' 
+										  or texto LIKE '%JorgeLuis%'
+										  or texto LIKE '%presiadoasesino%' 
+										  or texto LIKE '%NiPreciadoQuiereSerGober%' 
+										  or texto LIKE '%PreciadoAsesino%'   
 										  or texto LIKE '%AlegrateYaSeVan%' 
 										  or texto LIKE '%DesdeAbajoConTrabajo%' 
 										  or texto LIKE '%ClaroQuePodemos%' 
@@ -1851,6 +1857,8 @@
 										  or hashtags LIKE '%NachoPropone%' 
 										  or hashtags LIKE '%JorgeLuis%' 
 										  or hashtags LIKE '%presiadoasesino%' 
+										  or hashtags LIKE '%NiPreciadoQuiereSerGober%' 
+										  or hashtags LIKE '%PreciadoAsesino%'  
 										  or hashtags LIKE '%AlegrateYaSeVan%' 
 										  or hashtags LIKE '%DesdeAbajoConTrabajo%' 
 										  or hashtags LIKE '%ClaroQuePodemos%' 
