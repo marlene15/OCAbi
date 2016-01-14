@@ -209,4 +209,40 @@ class Modelo_inicio extends CI_Model
 			return FALSE;
 		}
 	}
+
+	//Obtener hashtags Gobernadores para la Nube de palabras
+		public function obtener_hashtags_gobernadores($mes)
+		{	
+			$hashtags=$this->db->query("SELECT Hashtags FROM `post` WHERE (Hashtags LIKE '%#ColimaCambiaSinPreciado%' 
+										  or Hashtags LIKE '%#Manzanillo.%' 
+										  or Hashtags LIKE '%#nachoeselbueno%' 
+										  or Hashtags LIKE '%#nachogobernado%' 
+										  or Hashtags LIKE '%#Nachogobernador%' 
+										  or Hashtags LIKE '%#NACHOPERALTA%' 
+										  or Hashtags LIKE '%#seriedad#Poresomivotoesposnacho%'	
+										  or Hashtags LIKE '%#TodosGanamos%' 
+										  Or Hashtags LIKE '#Vamosaganarlocho'
+										  Or Hashtags LIKE '#10de10'
+										  Or Hashtags LIKE '#10de10#NachoGobernador#CDMX#PRD'
+										  Or Hashtags LIKE '#MatrimoniosIgualitarios'
+										  Or Hashtags LIKE '#Colima'
+										  Or Hashtags LIKE '#ColimaCambiaSinPreciado'									  
+										  Or Hashtags LIKE '#ColimaesLocho'
+										  Or Hashtags LIKE '#ColimaSePintaDeNaranja'
+										  Or Hashtags LIKE '#DEQUEGANAMOSGANAMOS'
+										  Or Hashtags LIKE '#DEQUESEVANSEVA'
+										  Or Hashtags LIKE '#ElBuenoEsNacho'
+										  Or Hashtags LIKE '#YOSOY1DELOS7'
+										  Or Hashtags LIKE '#DEQUESEVANSEVAN'
+										  or Hashtags LIKE '%#vamosNACHO%') 
+										and MONTH(fecha) = '$mes'and Hashtags <>''");
+			if($hashtags->num_rows()>0)
+			{
+				return $hashtags->result();
+			}
+			else
+			{
+				return FALSE;
+			}
+		}
 }	

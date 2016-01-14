@@ -57,7 +57,8 @@ class Controlador_inicio extends CI_Controller {
 		$gobernadores = $this->modelo_consultas->obtener_cuenta_gobernadores($ultima_fecha); 		
 		$fecha = $this->fechas->fecha_dd_mes_aaaa_edita($ultima_fecha);
 		
-		$mes='03';
+		$mes='11';
+		$hashtags = $this->modelo_inicio->obtener_hashtags_gobernadores($mes);
 		 //echo "a =".$ultima_fecha;
 		 //print_r($gobernadores);
 		 //echo "a2 =".$ultima_fecha2;
@@ -74,7 +75,8 @@ class Controlador_inicio extends CI_Controller {
 			                "megustacl" => $gobernadores['locho']->Megusta,
 			                "seguidorescl" => $gobernadores['locho']->PersonasHablan,			                
 
-			                'ultima_fecha' => $fecha
+			                'ultima_fecha' => $fecha,
+			                'hashtags' => $hashtags
 			            );
 			$this->load->view('facebook/gobernador',$data);
 	}

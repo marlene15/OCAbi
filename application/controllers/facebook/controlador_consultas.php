@@ -51,8 +51,13 @@ class Controlador_consultas extends CI_Controller {
 		else{
 			$fecha_nueva='NULL';
 		}
-		$ExisteFecha = $this->modelo_consultas->ExisteFecha($fecha_nueva);
 		$existe = 0;
+		if($fecha_nueva >= '2015-12-01'){
+			$ExisteFecha = $this->modelo_consultas->ExisteFecha($fecha_nueva);
+		}
+		else{
+			$ExisteFecha = 2;
+		}
 		if ($ExisteFecha==1) 
 		{ //Si existe la fecha consultada 
 			$gobernadores = $this->modelo_consultas->obtener_cuenta_gobernadores($fecha_nueva); 
@@ -284,5 +289,16 @@ class Controlador_consultas extends CI_Controller {
 		            	  );
 			$this->load->view('facebook/chars/char_soyNachista',$datos);
 		}
+	}
+
+	public function nube_gobernadores()
+	{
+		$mes = $this->input->post('mes');	
+		$hashtags = $this->modelo_inicio->obtener_hashtags_gobernadores($mes);
+		$datos = array(
+	                "hashtags" => $hashtags,
+	                "mes" => $mes
+	            );
+		$this->load->view('facebook/chars/char_nube',$datos);
 	}
 }
