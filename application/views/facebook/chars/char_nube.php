@@ -9,7 +9,8 @@
         $aux=""; 
         for ($i=0; $i<count($hashtags); $i++)
         {
-            $porciones = explode(" ", $hashtags[$i]->hashtags);
+            $porciones = explode(" ", $hashtags[$i]->Hashtags);
+            $porciones = str_replace("#", "", $porciones); //Quitamos los # en los hashtags
             for ($j=0; $j<count($porciones); $j++)
         	{
         		if ($porciones[$j] != "") 

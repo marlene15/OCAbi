@@ -138,9 +138,9 @@
                                 </br></br>
                                 <div class="btn-toolbar" align="left"> 
                                   <div class="btn-group-vertical">
-                                    <a class="btn btn-success btn-lg active" id="consulta_nube"> Noviembre</a>
-                                    <a class="btn btn-primary btn-lg" id="consulta_nube2"> Diciembre</a>
-                                    <a class="btn btn-primary btn-lg" id="consulta_nube3"> Enero</a>
+                                    <!-- <a class="btn btn-success btn-lg active" id="consulta_nube"> Noviembre</a> -->
+                                    <a class="btn btn-success btn-lg active" id="consulta_nube"> Diciembre</a>
+                                    <a class="btn btn-primary btn-lg" id="consulta_nube2"> Enero</a>
                                   </div>
                                 </div>
                               </div>                               
@@ -182,13 +182,14 @@
     while (d.hasChildNodes())
     {
       d.removeChild(d.firstChild);
-    }
+    } 
 
     <?php //Llenamos el array con los hashtags    
           $aux=""; 
           for ($i=0; $i<count($hashtags); $i++)
           {
-              $porciones = explode(" ", $hashtags[$i]->hashtags);
+              $porciones = explode(" ", $hashtags[$i]->Hashtags);
+              $porciones = str_replace("#", "", $porciones); //Quitamos los # en los hashtags
               for ($j=0; $j<count($porciones); $j++)
             {
               if ($porciones[$j] != "") 
@@ -343,10 +344,9 @@
 
       $("#consulta_nube").click(function(event) {
         $("#consulta_nube").addClass('active btn-success');
-        $("#consulta_nube2").removeClass('active btn-success');
-        $("#consulta_nube3").removeClass('active btn-success');      
+        $("#consulta_nube2").removeClass('active btn-success');    
         var parametros = {
-                "mes" : '11'
+                "mes" : '12'
         };
         $.ajax({                                            
           type:"post",
@@ -362,27 +362,7 @@
       $("#consulta_nube2").click(function(event) {
         $("#consulta_nube2").addClass('active btn-success');
         $("#consulta_nube").removeClass('active btn-success');
-        $("#consulta_nub3").addClass('active btn-success');
-        $("#consulta_nube").removeClass('btn-primary');         
-        var parametros = {
-                "mes" : '12'
-        };
-        $.ajax({                                            
-          type:"post",
-          data:parametros,
-          url: '<?php echo site_url('facebook/controlador_consultas/nube_gobernadores');?>',                                      
-          dataType: 'html',
-          success: function (html) {
-            $('#nube_consulta').html(html);   
-          }
-        });            
-      });
-
-      $("#consulta_nube3").click(function(event) {
-        $("#consulta_nube3").addClass('active btn-success');
-        $("#consulta_nube").removeClass('active btn-success');
-        $("#consulta_nube2").removeClass('active btn-success');
-        $("#consulta_nube").addClass('btn-primary');
+        $("#consulta_nube").addClass('btn-primary');          
         var parametros = {
                 "mes" : '01'
         };

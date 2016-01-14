@@ -103,7 +103,6 @@ class Controlador_inicio extends CI_Controller {
 		$fecha = $this->fechas->fecha_dd_mes_aaaa_edita($ultima_fecha);
 		$mes='11';
 		$hashtags = $this->modelo_inicio->obtener_hashtags_gobernadores($mes);
-
 		$datos = array(
 	                "seguidoresn" => $gobernadores['nacho']->seguidores,
 	                "siguiendon" => $gobernadores['nacho']->siguiendo,

@@ -213,29 +213,32 @@ class Modelo_inicio extends CI_Model
 	//Obtener hashtags Gobernadores para la Nube de palabras
 		public function obtener_hashtags_gobernadores($mes)
 		{	
-			$hashtags=$this->db->query("SELECT Hashtags FROM `post` WHERE (Hashtags LIKE '%#ColimaCambiaSinPreciado%' 
-										  or Hashtags LIKE '%#Manzanillo.%' 
-										  or Hashtags LIKE '%#nachoeselbueno%' 
-										  or Hashtags LIKE '%#nachogobernado%' 
-										  or Hashtags LIKE '%#Nachogobernador%' 
-										  or Hashtags LIKE '%#NACHOPERALTA%' 
-										  or Hashtags LIKE '%#seriedad#Poresomivotoesposnacho%'	
-										  or Hashtags LIKE '%#TodosGanamos%' 
-										  Or Hashtags LIKE '#Vamosaganarlocho'
-										  Or Hashtags LIKE '#10de10'
-										  Or Hashtags LIKE '#10de10#NachoGobernador#CDMX#PRD'
-										  Or Hashtags LIKE '#MatrimoniosIgualitarios'
-										  Or Hashtags LIKE '#Colima'
-										  Or Hashtags LIKE '#ColimaCambiaSinPreciado'									  
-										  Or Hashtags LIKE '#ColimaesLocho'
-										  Or Hashtags LIKE '#ColimaSePintaDeNaranja'
-										  Or Hashtags LIKE '#DEQUEGANAMOSGANAMOS'
-										  Or Hashtags LIKE '#DEQUESEVANSEVA'
-										  Or Hashtags LIKE '#ElBuenoEsNacho'
-										  Or Hashtags LIKE '#YOSOY1DELOS7'
-										  Or Hashtags LIKE '#DEQUESEVANSEVAN'
-										  or Hashtags LIKE '%#vamosNACHO%') 
-										and MONTH(fecha) = '$mes'and Hashtags <>''");
+			$hashtags=$this->db->query("SELECT Hashtags FROM `post` WHERE (Hashtags LIKE '%ColimaCambiaSinPreciado%' 
+										  or Hashtags LIKE '%Manzanillo%' 
+										  or Hashtags LIKE '%nachoeselbueno%' 
+										  or Hashtags LIKE '%nachogobernado%' 
+										  or Hashtags LIKE '%Nachogobernador%' 
+										  or Hashtags LIKE '%NACHOPERALTA%' 
+										  or Hashtags LIKE '%seriedad%'	
+										  or Hashtags LIKE '%Poresomivotoesposnacho%'
+										  or Hashtags LIKE '%TodosGanamos%' 
+										  or Hashtags LIKE '%Vamosaganarlocho%'
+										  or Hashtags LIKE '%10de10%'
+										  or Hashtags LIKE '%NachoGobernador%'
+										  or Hashtags LIKE '%CDMX%'
+										  or Hashtags LIKE '%PRD%'
+										  or Hashtags LIKE '%MatrimoniosIgualitarios%'
+										  or Hashtags LIKE '%Colima%'
+										  or Hashtags LIKE '%ColimaCambiaSinPreciado%'									  
+										  or Hashtags LIKE '%ColimaesLocho%'
+										  or Hashtags LIKE '%ColimaSePintaDeNaranja%'
+										  or Hashtags LIKE '%DEQUEGANAMOSGANAMOS%'
+										  or Hashtags LIKE '%DEQUESEVANSEVA%'
+										  or Hashtags LIKE '%ElBuenoEsNacho%'
+										  or Hashtags LIKE '%YOSOY1DELOS7%'
+										  or Hashtags LIKE '%DEQUESEVANSEVAN%'
+										  or Hashtags LIKE '%vamosNACHO%') 
+										and MONTH(Fecha) = '$mes'and Hashtags <>''");
 			if($hashtags->num_rows()>0)
 			{
 				return $hashtags->result();
