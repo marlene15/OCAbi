@@ -124,6 +124,39 @@ class Controlador_inicio extends CI_Controller {
 		$this->load->view('facebook/comoVamos',$datos);
 	}
 
+		//Valoracion de comentarios para sitio de interes
+	public function valoracion_sitio_interes()
+	{
+		$comoVamos = $this->modelo_inicio->valoracion_comovamos();
+		$afmedios = $this->modelo_inicio->valoracion_afmedios();
+		$angel = $this->modelo_inicio->valoracion_angel();
+		$soyNachista = $this->modelo_inicio->valoracion_soynachista();
+		
+		$datos = array(
+					  'comoVamosP' => $comoVamos['positivos'],
+					  'comoVamosNe' => $comoVamos['negativos'],
+					  'comoVamosN' => $comoVamos['neutros'],
+					  'totalCV' => $comoVamos['total'],
+					  
+					  'afmediosP' => $afmedios['positivos'],
+					  'afmediosNe' => $afmedios['negativos'],
+					  'afmediosN' => $afmedios['neutros'],
+					  'totalFM' => $afmedios['total'],
+					  
+					  'angelP' => $angel['positivos'],
+					  'angelNE' => $angel['negativos'],
+					  'angelN' => $angel['neutros'],
+					  'totalAG' => $angel['total'],
+
+					  'soyNachistaP' => $soyNachista['positivos'],
+					  'soyNachistaNe' => $soyNachista['negativos'],
+					  'soyNachistaN' => $soyNachista['neutros'],
+					  'totalSN' => $soyNachista['total']
+					  
+					  );
+		$this->load->view('facebook/valoracion_sitio_interes',$datos);
+	}
+
 	//Afmedios
 	public function afmedios()
 	{

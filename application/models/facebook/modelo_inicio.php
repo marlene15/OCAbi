@@ -130,6 +130,121 @@ class Modelo_inicio extends CI_Model
             );
             return $a;
 		}
+
+		//Obtener valoracion de comentarios de ComoVamosColima
+
+		public function valoracion_comovamos()
+		{
+			$positivos = $this->db->query("SELECT count(*) as positivos FROM post WHERE Valoracion = 1 and 
+										 	Id_Candidato = 'ComoVamosColima'"
+										);
+			$negativos = $this->db->query("SELECT count(*) as negativos FROM post WHERE Valoracion = 2 and 
+										 	Id_Candidato = 'ComoVamosColima'"
+										);
+			$neutros = $this->db->query("SELECT count(*) as neutros FROM post WHERE Valoracion = 3 and 
+										 	Id_Candidato = 'ComoVamosColima'"
+										);
+
+			$row_positivos = $positivos->row();
+			$row_negativos = $negativos->row();
+			$row_neutros = $neutros->row();
+			$total = $row_positivos->positivos+$row_negativos->negativos+$row_neutros->neutros;
+
+			$a = array(
+                "positivos" => ($row_positivos->positivos*100)/$total,
+                "negativos" => ($row_negativos->negativos*100)/$total,
+                "neutros" => ($row_neutros->neutros*100)/$total,
+                "total" => $total
+            );
+            return $a;
+		}
+
+
+		//Obtener valoracion de comentarios de afmedios
+
+		public function valoracion_afmedios()
+		{
+			$positivos = $this->db->query("SELECT count(*) as positivos FROM post WHERE Valoracion = 1 and 
+										 	Id_Candidato = 'afmedios'"
+										);
+			$negativos = $this->db->query("SELECT count(*) as negativos FROM post WHERE Valoracion = 2 and 
+										 	Id_Candidato = 'afmedios'"
+										);
+			$neutros = $this->db->query("SELECT count(*) as neutros FROM post WHERE Valoracion = 3 and 
+										 	Id_Candidato = 'afmedios'"
+										);
+
+			$row_positivos = $positivos->row();
+			$row_negativos = $negativos->row();
+			$row_neutros = $neutros->row();
+			$total = $row_positivos->positivos+$row_negativos->negativos+$row_neutros->neutros;
+
+			$a = array(
+                "positivos" => ($row_positivos->positivos*100)/$total,
+                "negativos" => ($row_negativos->negativos*100)/$total,
+                "neutros" => ($row_neutros->neutros*100)/$total,
+                "total" => $total
+            );
+            return $a;
+		}
+
+
+		//Obtener valoracion de comentarios de angelguardianmx
+
+		public function valoracion_angel()
+		{
+			$positivos = $this->db->query("SELECT count(*) as positivos FROM post WHERE Valoracion = 1 and 
+										 	Id_Candidato = 'angelguardianmx'"
+										);
+			$negativos = $this->db->query("SELECT count(*) as negativos FROM post WHERE Valoracion = 2 and 
+										 	Id_Candidato = 'angelguardianmx'"
+										);
+			$neutros = $this->db->query("SELECT count(*) as neutros FROM post WHERE Valoracion = 3 and 
+										 	Id_Candidato = 'angelguardianmx'"
+										);
+
+			$row_positivos = $positivos->row();
+			$row_negativos = $negativos->row();
+			$row_neutros = $neutros->row();
+			$total = $row_positivos->positivos+$row_negativos->negativos+$row_neutros->neutros;
+
+			$a = array(
+                "positivos" => ($row_positivos->positivos*100)/$total,
+                "negativos" => ($row_negativos->negativos*100)/$total,
+                "neutros" => ($row_neutros->neutros*100)/$total,
+                "total" => $total
+            );
+            return $a;
+		}
+
+
+		//Obtener valoracion de comentarios de soynachista
+
+		public function valoracion_soynachista()
+		{
+			$positivos = $this->db->query("SELECT count(*) as positivos FROM post WHERE Valoracion = 1 and 
+										 	Id_Candidato = 'soynachista'"
+										);
+			$negativos = $this->db->query("SELECT count(*) as negativos FROM post WHERE Valoracion = 2 and 
+										 	Id_Candidato = 'soynachista'"
+										);
+			$neutros = $this->db->query("SELECT count(*) as neutros FROM post WHERE Valoracion = 3 and 
+										 	Id_Candidato = 'soynachista'"
+										);
+
+			$row_positivos = $positivos->row();
+			$row_negativos = $negativos->row();
+			$row_neutros = $neutros->row();
+			$total = $row_positivos->positivos+$row_negativos->negativos+$row_neutros->neutros;
+
+			$a = array(
+                "positivos" => ($row_positivos->positivos*100)/$total,
+                "negativos" => ($row_negativos->negativos*100)/$total,
+                "neutros" => ($row_neutros->neutros*100)/$total,
+                "total" => $total
+            );
+            return $a;
+		}
 	
 		//Obtener cuenta de Comovamoscolima
 		public function obtener_cuenta_comoVamos()

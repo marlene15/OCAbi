@@ -106,6 +106,12 @@
                                         <span class="selected"></span>
                                     </a>
                                 </li>
+                                <li>
+                                    <a href="<?php echo site_url('facebook/controlador_inicio/valoracion_sitio_interes');?>"> 
+                                        <span class="title">Sitio de Interés</span>
+                                        <span class="selected"></span>
+                                    </a>
+                                </li>
                             </ul>
                         </li>
                         <li>
