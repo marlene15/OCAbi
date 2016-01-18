@@ -67,7 +67,7 @@ if (<?php echo $vtab ?>==1) {
   };      
   if (<?php echo $existe ?> ==2) {
     $('#alert').show();
-    $('#alert').html('<div id="alert" class="alert alert-error"><button type="button" class="close" data-dismiss="alert"></button><strong><center>Fecha No Encontrada!</strong> La información se encuentra disponible a partir de la fecha: 1 Diciembre 2015 al <?php echo $ultima_fecha ?><br/>Se colocó la última fecha encontrada</center></div>');
+    $('#alert').html('<div id="alert" class="alert alert-error"><button type="button" class="close" data-dismiss="alert"></button><strong><center>Fecha No Encontrada!</strong> La información se encuentra disponible a partir de la fecha: 1 diciembre 2015 al 14 de enero 2016 y del 18 de enero 2016 al <?php echo $ultima_fecha ?><br/>Se colocó la última fecha encontrada</center></div>');
   }
   else
   {
