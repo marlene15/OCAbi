@@ -66,7 +66,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
                                     </h3>
                                     <br/><br/>
                                     <h1 class="page-title" id="titulo_proyecto3">
-                                        OCA
+                                        OCAdos
                                     </h1>
                                 </center>
                             </div>
