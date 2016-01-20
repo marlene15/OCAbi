@@ -62,7 +62,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
                                         Observatorio Social Media
                                     </h3>
                                     <h3 class="page-title" id="titulo_proyecto2">
-                                        Elecciones Colima 2015
+                                        Elecciones Extraordinarias Colima 2016
                                     </h3>
                                     <br/><br/>
                                     <h1 class="page-title" id="titulo_proyecto3">
