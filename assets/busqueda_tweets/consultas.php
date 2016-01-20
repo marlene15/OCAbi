@@ -5,7 +5,7 @@ if(isset($_POST['id']))
 	switch($_POST['id'])
 	{
 		case 'fecha':
-			$sql='SELECT fecha, count(fecha) from twitt group by fecha order by fecha;';
+			$sql='SELECT fecha, count(fecha) from twitt  where fecha >= "2015-12-01" group by fecha order by fecha;';
 			$result = mysql_query($sql);
 			$c=0;        
 
